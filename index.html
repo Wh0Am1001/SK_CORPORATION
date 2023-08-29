@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HomePage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@300&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.full-page-text {
+position: relative;
+text-align: center;
+font-weight: bold;
+margin-top: 50px;
+height: 100vh;
+padding-top: 25vh; /* Set the padding to half of the viewport height */
+position: fixed;
+  height: 100%;
+  width: 100%;
+  background-size: cover; /* Change back to 'cover' for responsiveness */
+  background-repeat: no-repeat;
+  animation: fadeIn 5s linear ;
+}
+
+@keyframes fadeIn {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+    </style>
+  </head>
+
+<body>
+  <div class="grid-container">
+     <!-- Header -->
+     <header class="header">
+      <div class="header-left">
+       <a href="./index.html">
+         <img src="./images/logo.jpg" style="width: 150px; height: 70px;">
+       </a>
+      </div>
+       <div class="headerlanguage">
+         <button class="btn btn-outline-info" id="enButton">English</button>
+         <button class="btn btn-outline-danger" id="laButton">Lao</button>
+       </div>
+      <div class="header-right">
+        <!-- Navbar Form -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+         <div class="container">
+             <ul class="navbar-nav">
+                 <!-- Your menu items here -->
+                 <li class="nav-item">
+                     <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+                 </li> 
+                     <li class="nav-item">
+                         <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+                        
+                     </li> <li class="nav-item">
+                      <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+                  </li> 
+                     <li class="nav-item">
+                         <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+                     </li> 
+                     <li class="nav-item">
+                         <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+                     </li>
+                     
+               
+             </ul>
+         </div>
+     </nav>
+       </div>
+
+     <div class="menu-icon" onclick="openSidebar()">
+         <span class="material-icons-outlined">menu</span>
+       </div>
+     </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <a href="./index.html">
+              <span class="material-icons-outlined" style="font-size: 22px;color:rgb(0, 0, 0);">SK CORPORATION</span>
+          </a>
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="#" target="_blank">
+            <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="#" target="_blank">
+            <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="#" target="_blank">
+            <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="#" target="_blank">
+            <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+          </a>
+        </li>   
+      </ul>
+    </aside>
+    <!-- End Sidebar -->
+
+      <!--Content-->
+        <div class="content"> 
+          
+          <div class="moving">
+            <h1 class="full-page-text translate" data-en="SUSTAINABLE CHOICE FOR YOU" data-la="ທາງເລືອກທີ່ຍືນຍົງສໍາລັບທ່ານ">SUSTAINABLE CHOICE FOR YOU</h1><br><br>
+            <h1 class="full-page-text translate" data-en="SUSTAINABLE POWER FOR THE NATIONS" data-la="ພະລັງງານທີ່ຍືນຍົງສຳລັບຊາດ">SUSTAINABLE POWER FOR THE NATIONS</h1>
+            <div class="moving-bg"></div>
+          </div>
+
+        </div>
+
+        <!--footer-->
+        <div class="footer">
+          <p class="translate" data-en=" A part of SK Corporation, BK Construction has already been building in distant areas for 29 years." data-la=" ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ."> A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.</p>
+          <p class="translate" data-en="Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader" data-la="ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ">Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader</p>
+        </div>
+
+   </div>
+
+   <script>
+    // Translations object
+    const translations = {
+        'en': {
+          'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'NEWS',
+            'ຂ່າວສານ':'NEWS',
+            'ໄຟຟ້າ': 'Electric',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'Hydropower Dam Project',
+            'Hydropower Dam Project':'Hydropower Dam Project',
+            'ຜົນສຳເລັດ':'The achievements',
+            'The achievements':'The achievements',
+            'ກ່ຽວກັບ':'About',
+            'About':'About',
+            'ຕິດຕໍ່':'Contact',
+            'Contact':'Contact',
+            'SUSTAINABLE CHOICE FOR YOU':'SUSTAINABLE CHOICE FOR YOU',
+            'ທາງເລືອກທີ່ຍືນຍົງສໍາລັບທ່ານ':'SUSTAINABLE CHOICE FOR YOU',
+            'ພະລັງງານທີ່ຍືນຍົງສຳລັບຊາດ':'SUSTAINABLE POWER FOR THE NATIONS',
+            'SUSTAINABLE POWER FOR THE NATIONS':'SUSTAINABLE POWER FOR THE NATIONS',
+
+            ' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.': ' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.',
+            ' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.':' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.',
+            'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader':'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader',
+            'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ':'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader'
+            
+
+        },
+        'la': {
+          'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'ຂ່າວສານ',
+            'ຂ່າວສານ':'ຂ່າວສານ',
+            'Hydropower Dam Project':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'The achievements':'ຜົນສຳເລັດ',
+            'ຜົນສຳເລັດ':'ຜົນສຳເລັດ',
+            'About':'ກ່ຽວກັບ',
+            'ກ່ຽວກັບ':'ກ່ຽວກັບ',
+            'Contact':'ຕິດຕໍ່',
+            'ຕິດຕໍ່':'ຕິດຕໍ່',
+            'SUSTAINABLE CHOICE FOR YOU':'ທາງເລືອກທີ່ຍືນຍົງສໍາລັບທ່ານ',
+            'ທາງເລືອກທີ່ຍືນຍົງສໍາລັບທ່ານ':'ທາງເລືອກທີ່ຍືນຍົງສໍາລັບທ່ານ',
+            'SUSTAINABLE POWER FOR THE NATIONS':'ພະລັງງານທີ່ຍືນຍົງສຳລັບຊາດ',
+            'ພະລັງງານທີ່ຍືນຍົງສຳລັບຊາດ':'ພະລັງງານທີ່ຍືນຍົງສຳລັບຊາດ',
+
+            ' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.':' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.',
+            ' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.':' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.',
+            'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader':'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ',
+            'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ':'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ'
+        }
+    };
+
+    // Function to update translations
+   function updateTranslations(lang) {
+        const elements = document.querySelectorAll('.translate');
+        elements.forEach(element => {
+            const translationKey = element.textContent;
+            element.textContent = translations[lang][translationKey];
+        });
+    }
+   
+    // Language button event listeners
+    const enButton = document.getElementById('enButton');
+    const laButton = document.getElementById('laButton');
+
+    enButton.addEventListener('click', () => {
+        updateTranslations('en');
+    });
+
+    laButton.addEventListener('click', () => {
+        updateTranslations('la');
+    });
+</script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

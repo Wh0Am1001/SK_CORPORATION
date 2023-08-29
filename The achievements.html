@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>The achievements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@300&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .content-hp {
+        background-image: url('./images/bg3un.jpg');
+        position: relative;
+      }
+      
+      .content-text {
+  position: absolute;
+  top: 0px; /* Change bottom to top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.centered-and-bold {
+  text-align: center; /* Center-align the text */
+  font-weight: bold; /* Make the text bold */
+  margin-top: 50px; /* Add margin from the top */
+  color:rgb(208, 255, 0);
+  background-color: rgb(43, 43, 43);
+  height: 55px;
+}
+
+/* Adjust accordion button style */
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    background-color: rgb(238, 183, 114);
+    font-weight: bold; /* Make the text bold */
+  }
+
+  /* Adjust accordion item style */
+  .accordion-item {
+    border: none; /* Remove the default border */
+    margin-bottom: 10px; /* Add some spacing between items */
+   
+  }
+
+  .accordion-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* This centers the text */
+    padding: 10px; /* Add padding for better spacing */
+    background-image: url(./images/bg3un.jpg);
+  }
+
+  .accordion-body img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Add some spacing between image and text */
+  }
+
+  /* Set max-width for images within accordion content */
+  .accordion-body img {
+    max-width: 100%;
+    height: auto;
+  }
+  .ourcus {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Set width to 100% to fill container */
+    height: 100vh; /* Set height to 100vh for full viewport height */
+  }
+
+  .ourcus img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .partnership {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set height to 100vh for full viewport height */
+  }
+
+  .partnership img {
+    max-width: 100%; /* Make sure the image doesn't exceed container width */
+    max-height: 100%; /* Make sure the image doesn't exceed container height */
+    object-fit: contain; /* Maintain aspect ratio while fitting in the container */
+    margin: 0 10px; /* Add some spacing between images */
+  }
+ 
+        </style>
+  </head>
+
+<body>
+  <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+         <a href="./index.html">
+           <img src="./images/logo.jpg" style="width: 150px; height: 70px;">
+         </a>
+        </div>
+         <div class="headerlanguage">
+           <button class="btn btn-outline-info" id="enButton">English</button>
+           <button class="btn btn-outline-danger" id="laButton">Lao</button>
+         </div>
+        <div class="header-right">
+          <!-- Navbar Form -->
+          <nav class="navbar navbar-expand-sm navbar-light bg-light">
+           <div class="container">
+               <ul class="navbar-nav">
+                   <!-- Your menu items here -->
+                   <li class="nav-item">
+                       <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+                   </li> 
+                       <li class="nav-item">
+                           <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+                          
+                       </li> <li class="nav-item">
+                        <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+                    </li> 
+                       <li class="nav-item">
+                           <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+                       </li> 
+                       <li class="nav-item">
+                           <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+                       </li>
+                       
+                 
+               </ul>
+           </div>
+       </nav>
+         </div>
+ 
+       <div class="menu-icon" onclick="openSidebar()">
+           <span class="material-icons-outlined">menu</span>
+         </div>
+       </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="./index.html">
+                <span class="material-icons-outlined" style="font-size: 22px;color:rgb(0, 0, 0);">SK CORPORATION</span>
+            </a>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+            </a>
+          </li>   
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!--Content-->
+        <div class="content-hp"> 
+          <br>
+          <h1 class="centered-and-bold translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</h1>
+
+          <div class="container my-0">
+            <!-- Accordion -->
+            <div id="accordion-basic" class="accordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate" data-en="RECONSTRUCTION OF FOUNDATION AND COLUMN FOR NAMHAI BRIDGE" data-la="ການຟື້ນຟູຮາກຖານ ແລະ ເສົາຄໍ້າສໍາລັບຂົວນ້ຳໄຮ່"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#content2"
+                  >RECONSTRUCTION OF FOUNDATION AND COLUMN FOR NAMHAI BRIDGE</button>
+                </h2>
+                <div id="content2" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re0.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en=" examine sustainability and benefit-sharing mechanisms in the context of the Theun-Hinboun Expansion Project (THXP) in central Laos. THXP has been planned and implemented in accordance with international good practice, and is now at the stage of preparing for closure on a number of key issues, in particular on livelihood restoration." data-la=" ກວດສອບກົນໄກຄວາມຍືນຍົງ ແລະ ການແບ່ງປັນຜົນປະໂຫຍດ ໃນເນື້ອໃນຂອງໂຄງການຂະຫຍາຍໂຕTheun-Hinboun (THXP) ໃນພາກກາງຂອງລາວ. THXP ໄດ້ມີການວາງແຜນ ແລະ ຈັດຕັ້ງປະຕິບັດຕາມການປະຕິບັດທີ່ດີຂອງສາກົນ, ແລະ ປັດຈຸບັນແມ່ນຢູ່ໃນຂັ້ນຕອນການກະກຽມປິດບັນຫາສໍາຄັນຈໍານວນຫນຶ່ງ, ໂດຍສະເພາະແມ່ນກ່ຽວກັບການຟື້ນຟູຊີວິດການເປັນຢູ່."> examine sustainability and benefit-sharing mechanisms in the context of the Theun-Hinboun Expansion Project (THXP) in central Laos. THXP has been planned and implemented in accordance with international good practice, and is now at the stage of preparing for closure on a number of key issues, in particular on livelihood restoration.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="DEWAT Waste Water Treatment Tanks for 1000persons at Operator Village THPC Power Plant" data-la="ຖັງປິ່ນປົວນ້ໍາເສຍ DEWAT ສໍາລັບ 1000ຄົນ ທີ່ໂຮງໄຟຟ້າOperator Village THPC"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content3"
+                  >DEWAT Waste Water Treatment Tanks for 1000persons at Operator Village THPC Power Plant</button>
+                </h2>
+                <div id="content3" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re1.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="THPC VILLAGE CONTRACT C-2: 19 HOUSINGS AND OFFICE BUILDING, ROADS,LANDSCAPING AND ALL UTILITIES SYSTEM" data-la="THPC VILLAGE C-2 ສັນຍາ: 19 ອາຄານ, ເຮືອນພັກ ແລະ ຫ້ອງການ, ຖະຫນົນຫົນທາງ, ທິວທັດ ແລະ ເຄື່ອງໃຊ້ທັງຫມົດ.">THPC VILLAGE CONTRACT C-2: 19 HOUSINGS AND OFFICE BUILDING, ROADS,LANDSCAPING AND ALL UTILITIES SYSTEM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="SLOPE PROTECTION WORK AT THASALA FOR ROAD AND TOWER LINE " data-la="ວຽກງານປ້ອງກັນດິນເຈື່ອນຢູ່ທີ່ THASALA ສຳລັບຖະໜົນ ແລະ TOWER LINE"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content4"
+                  >SLOPE PROTECTION WORK AT THASALA FOR ROAD AND TOWER LINE </button>
+                </h2>
+                <div id="content4" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re2.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="Heavy rains in 2018 caused numerous landslides on the road network and a review was undertaken of the performance of the slope stabilization trial sites implemented." data-la="ຝົນຕົກໜັກໃນປີ 2018 ເຮັດໃຫ້ເກີດດິນເຈື່ອນລົງເທິງຕາໜ່າງເສັ້ນທາງ ແລະ ໄດ້ມີການກວດກາຄືນການປະຕິບັດສະຖານທີ່ທົດລອງປ້ອງກັນຄວາມໝັ້ນຄົງທາງເນີນ.">Heavy rains in 2018 caused numerous landslides on the road network and a review was undertaken of the performance of the slope stabilization trial sites implemented.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="CLEANING OF SEDIMENTS FROM STOP LOG GATES, DRAFT TUBE UNIT 2 AT NG POWERHOUSE OF THXP PROJECT BY SAND PUMP 8”" data-la="ການທຳຄວາມສະອາດຕະກອນຈາກປະຕູ STOP LOG,ຮ່າງທໍ່ໜ່ວຍທີ2 ທີ່ THXP Project NG POWERHOUSE BY SAND PUMP 8”"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content5"
+                  >CLEANING OF SEDIMENTS FROM STOP LOG GATES, DRAFT TUBE UNIT 2 AT NG POWERHOUSE OF THXP PROJECT BY SAND PUMP 8”</button>
+                </h2>
+                <div id="content5" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re2.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="In 2016-17 the turbines in the original TH Units were replaced with a new and more efficient turbines, bringing the total combined generating capacity of THPC to 520 MW, with much of the water from the new reservoir being used to generate power twice." data-la="ໃນປີ 2016-17 ເຄື່ອງຈັກ THPC ເດີມໄດ້ຖືກທົດແທນດ້ວຍ turbines ໃໝ່ ແລະມີປະສິດທິພາບຫຼາຍຂຶ້ນ, ເຮັດໃຫ້ກຳລັງການຜະລິດລວມຂອງ THPC ເປັນ 520 MW, ນ້ຳຈາກອ່າງເກັບນ້ຳໃໝ່ຫຼາຍແມ່ນໃຊ້ເພື່ອຜະລິດພະລັງງານສອງຄັ້ງ.">In 2016-17 the turbines in the original TH Units were replaced with a new and more efficient turbines, bringing the total combined generating capacity of THPC to 520 MW, with much of the water from the new reservoir being used to generate power twice.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE CONSTRUCTION OF 115 + 22KV PAKSONG SUBSTATION FOR EXPANSION FEEDER" data-la="ໂຄງການ​ ກໍ່ສ້າງ ແລະ ຂະຫຍາຍ Feeder 22 kV ສະຖານີ​ໄຟຟ້າແຮງສູງ 115kV"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content6"
+                  >THE CONSTRUCTION OF 115 + 22KV PAKSONG SUBSTATION FOR EXPANSION FEEDER</button>
+                </h2>
+                <div id="content6" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re3.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="The project will (i) construct 398 kilometers (km) of 115-kilovolt (kV) transmission lines with associated 115/22 kV substations, and erect about 1,100 km of new 22 kV medium- and low-voltage distribution lines to expand access to grid electricity to consumers" data-la="​ໂຄງການ​ດັ່ງກ່າວ​ຈະ​ກໍ່ສ້າງ​ສາຍ​ສົ່ງ 115 ກິ​ໂລ​ໂວນ ​ແຮງ​ດັນ 115 ກິ​ໂລ​ໂວນ (kV) ​ໃນ​ໄລຍະ 398 ກິ​ໂລ​ແມັດ ​ພ້ອມ​ກັບ​ສະຖານີ​ຍ່ອຍ 115/22 kV ​ແລະ ກໍ່ສ້າງ​ສາຍ​ສົ່ງ​ແຮງ​ດັນ​ກາງ ​ແລະ ແຮງ​ດັນ​ຕ່ຳ 22 ກິ​ໂລ​ໂວນ ຍາວ 1,100 ກິ​ໂລ​ແມັດ ​ເພື່ອ​ຂະຫຍາຍ​ການ​ເຂົ້າ​ເຖິງ ຕາຂ່າຍໄຟຟ້າໃຫ້ແກ່ຜູ້ບໍລິໂພກ">The project will (i) construct 398 kilometers (km) of 115-kilovolt (kV) transmission lines with associated 115/22 kV substations, and erect about 1,100 km of new 22 kV medium- and low-voltage distribution lines to expand access to grid electricity to consumers</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE CONSTRUCTION OF 115KV PAKMONG 2 STATION AND BITCOIN FACTORY" data-la="ການກໍ່ສ້າງສະຖານີໄຟຟ້າປາກຊ່ອງ2 ຂະໜາດ115KV ແລະ ໂຮງງານBitcoin"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content7"
+                  >THE CONSTRUCTION OF 115KV PAKMONG 2 STATION AND BITCOIN FACTORY</button>
+                </h2>
+                <div id="content7" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re4.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="Survey-design and construction installation of 115kV (50MW) high-voltage power station, 10 4000kVA/3Ph battery and 22kV power grid to serve the Bitcoin manufacturing plant.Location: PakMong Village, Numbark District, LuangPabang Province." data-la="​ສຳຫລວດ-ອອກແບບ ແລະ​ ກໍ່ສ້າງຕິດຕັ້ງ ສະຖານີໄຟຟ້າແຮງສູງ 115kV​ (50MW), ຫມໍ້ແປງ​ 4000kVA/3Ph ຈຳນວນ​ 10​ ໜ່ວຍ ແລະ​ ຕາຂ່າຍໄຟຟ້າ 22kV​ ເພື່ອຮັບໃຊ້ໂຮງງານຜະລິດ Bitcoin.ສະຖານທີ: ບ້ານປາກມອງ,​ ເມືອງນ້ຳບາກ,​ ແຂວງຫລວງພະບາງ.">Survey-design and construction installation of 115kV (50MW) high-voltage power station, 10 4000kVA/3Ph battery and 22kV power grid to serve the Bitcoin manufacturing plant.Location: PakMong Village, Numbark District, LuangPabang Province.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER" data-la="ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content8"
+                  >THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER</button>
+                </h2>
+                <div id="content8" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re6.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="Construction of a 22kV medium-voltage electricity grid and installing 01 sets of electrical circuits (100kVA/3Ph) with two Blue Dot EV Charger Station boards to serve a single limited heavy machinery company, location: River Moon Restaurant, Sangthong District, Vientian Province." data-la="ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (100kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Blue​ Dot EV Charger​ Station ຈຳນວນ​ 2​ ລະບົບ ເພື່ອຮັບໃຊ້ບໍລິສັດ ລາວທານີກົນຈັກໜັກ ຈຳກັດຜູ້ດຽວ, ສະຖານທີ່: ຮ້ານອາຫານ River moon​,​ ເມືອງສັງທອງ,​ ນະຄອນຫລວງວຽງຈັນ.​">Construction of a 22kV medium-voltage electricity grid and installing 01 sets of electrical circuits (100kVA/3Ph) with two Blue Dot EV Charger Station boards to serve a single limited heavy machinery company, location: River Moon Restaurant, Sangthong District, Vientian Province.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE CONSTRUCTION OF UNDERGROUND 22KV + FIBER OPTIC AND ELECTRICAL SWITCHGEAR SIZE 630 AMP" data-la="ການກໍ່ສ້າງໃຕ້ດິນ 22KV + ໄຟເບີອັອບຕິກ ແລະ ສະວິດເກຍໄຟຟ້າ ຂະໜາດ 630 ແອັມ(AMP)"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content9"
+                  >THE CONSTRUCTION OF UNDERGROUND 22KV + FIBER OPTIC AND ELECTRICAL SWITCHGEAR SIZE 630 AMP</button>
+                </h2>
+                <div id="content9" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re7.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="The project takes the 0,4/22kV electric grid and the fiber optic cable to the ground with a 630 Amp LT Electrical Switchgear, location: South 13th Street, Main16, SangHin Village, Saythany District, Vientian Province." data-la="ໂຄງການ ເອົາຕາຂ່າຍໄຟຟ້າ 0,4/22kV ແລະ ສາຍໄຟອັອບຕິກລົງດິນ ພ້ອມດ້ວຍຕູ້ LT Electrical Switchgear ຂະຫນາດ 630 Amp, ສະຖານທີ: ຖະໜົນ13ໃຕ້,ຫຼັກ16, ບ້ານສາງຫີນ, ເມືອງໄຊທານີ, ນະຄອນຫລວງວຽງຈັນ.">The project takes the 0,4/22kV electric grid and the fiber optic cable to the ground with a 630 Amp LT Electrical Switchgear, location: South 13th Street, Main16, SangHin Village, Saythany District, Vientian Province.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND LOCA EV FAST CHARGER" data-la="ການສະຫນອງ ແລະ ຕິດຕັ້ງ TR 250KVA + 22KV ແລະ LOCA EV FAST CHARGER"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content10"
+                  >THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND LOCA EV FAST CHARGER</button>
+                </h2>
+                <div id="content10" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re8.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="Construction of a 22kV medium-voltage electricity grid and installation of 01 sets of electrical circuits (160kVA/3Ph) with the Loca Fast Charge 120kW, location: Somsaeard Village, Thakhaek District, Khammuan Province." data-la="ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (160kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Loca Fast Charge 120kW, ສະຖານທີ່: ບ້ານສົມສະອາດ,​ ເມືອງທ່າແຂກ,​ ແຂວງຄຳມ່ວນ.​">Construction of a 22kV medium-voltage electricity grid and installation of 01 sets of electrical circuits (160kVA/3Ph) with the Loca Fast Charge 120kW, location: Somsaeard Village, Thakhaek District, Khammuan Province.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE SUPPLY AND INSTALLATION OF TR 800KVA + MDB + 22KV TRANSMISSION LINE" data-la="ການສະໜອງ ແລະ ຕິດຕັ້ງສາຍສົ່ງTR 800KVA + MDB + 22KV"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content11"
+                  >THE SUPPLY AND INSTALLATION OF TR 800KVA + MDB + 22KV TRANSMISSION LINE</button>
+                </h2>
+                <div id="content11" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re9.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="The installation of 01 sets of electrical batteries and MDB boards (800kVA/3Ph) to serve the Ottovin (KOLAO) Branch 1, Location: T2 Road, KhounTa Village, SeeKhottaBong District, Vientian Province." data-la="ໂຄງການ​ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ​ ແລະ​ ຕູ້​ MDB ຈຳນວນ 01 ຊຸດ (800kVA/3Ph) ເພື່ອຮັບໃຊ້​ ບໍລິສັດ​ ໂອໂຕເວີນດ໌ (KOLAO)​ ສາຂາທີ ​1, ສະຖານທີ: ຖະໜົນ​ T2,​ ບ້ານຂຸນຕາ,​ເມືອງສີໂຄດຕະບອງ,​ ນະຄອນຫລວງວຽງຈັນ.​​">The installation of 01 sets of electrical batteries and MDB boards (800kVA/3Ph) to serve the Ottovin (KOLAO) Branch 1, Location: T2 Road, KhounTa Village, SeeKhottaBong District, Vientian Province.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE SUPPLY AND INSTALLATION OF TR 50KVA/3PHASE" data-la="ການສະຫນອງ ແລະ ການຕິດຕັ້ງTR 50KVA/3PHASE"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content12"
+                  >THE SUPPLY AND INSTALLATION OF TR 50KVA/3PHASE</button>
+                </h2>
+                <div id="content12" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re10.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="The 50kVA supply and replacement program to serve the Mini big C branch of the target fish ingestion location: Ponpapao Village, SySattanark District ,Vientian Province" data-la="ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍໝໍ້ແປງ 50kVA ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ສາຂາໂພນປາເປົ້າ​ ສະຖານທີ: ບ້ານໂພນປາເປົ້່າ,​ ເມືອງສີສັດຕະນາກ,​ ນະຄອນຫລວງວຽງຈັນ.">The 50kVA supply and replacement program to serve the Mini big C branch of the target fish ingestion location: Ponpapao Village, SySattanark District ,Vientian Province</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button translate"data-en="THE SUPPLY AND INSTALLATION OF BILLBOARD AT MINI BIG C" data-la="ການສະຫນອງ ແລະ ການຕິດຕັ້ງ BILLBOARD ທີ່ MINI BIG C"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#content13"
+                  >THE SUPPLY AND INSTALLATION OF BILLBOARD AT MINI BIG C</button>
+                </h2>
+                <div id="content13" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <img src="./images/re11.jpg" alt="">
+                    <p class="translate" style=" font-weight: bold;" data-en="The project provides and replaces the signature lights to serve the Mini big C company of 09 location branches: Vientian Province" data-la="ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍດອກໄຟປ້າຍ ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ຈຳນວນ 09 ສາຂາ​ ສະຖານທີ: ນະຄອນຫລວງວຽງຈັນ.">The project provides and replaces the signature lights to serve the Mini big C company of 09 location branches: Vientian Province</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row ourcus">
+                <img src="./images/ourcustomer.jpg" alt="Our Customer">
+                <img src="./images/pn1.jpg">
+            </div>
+            
+          </div>
+          
+      
+   </div>
+
+   <script>
+    // Translations object
+    const translations = {
+        'en': {
+          'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'NEWS',
+            'ຂ່າວສານ':'NEWS',
+            'ໄຟຟ້າ': 'Electric',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'Hydropower Dam Project',
+            'Hydropower Dam Project':'Hydropower Dam Project',
+            'ຜົນສຳເລັດ':'The achievements',
+            'The achievements':'The achievements',
+            'ກ່ຽວກັບ':'About',
+            'About':'About',
+            'ຕິດຕໍ່':'Contact',
+            'Contact':'Contact',
+
+            'ການຟື້ນຟູຮາກຖານ ແລະ ເສົາຄໍ້າສໍາລັບຂົວນ້ຳໄຮ່':'RECONSTRUCTION OF FOUNDATION AND COLUMN FOR NAMHAI BRIDGE',
+            'RECONSTRUCTION OF FOUNDATION AND COLUMN FOR NAMHAI BRIDGE':'RECONSTRUCTION OF FOUNDATION AND COLUMN FOR NAMHAI BRIDGE',
+            ' ກວດສອບກົນໄກຄວາມຍືນຍົງ ແລະ ການແບ່ງປັນຜົນປະໂຫຍດ ໃນເນື້ອໃນຂອງໂຄງການຂະຫຍາຍໂຕTheun-Hinboun (THXP) ໃນພາກກາງຂອງລາວ. THXP ໄດ້ມີການວາງແຜນ ແລະ ຈັດຕັ້ງປະຕິບັດຕາມການປະຕິບັດທີ່ດີຂອງສາກົນ, ແລະ ປັດຈຸບັນແມ່ນຢູ່ໃນຂັ້ນຕອນການກະກຽມປິດບັນຫາສໍາຄັນຈໍານວນຫນຶ່ງ, ໂດຍສະເພາະແມ່ນກ່ຽວກັບການຟື້ນຟູຊີວິດການເປັນຢູ່.':' examine sustainability and benefit-sharing mechanisms in the context of the Theun-Hinboun Expansion Project (THXP) in central Laos. THXP has been planned and implemented in accordance with international good practice, and is now at the stage of preparing for closure on a number of key issues, in particular on livelihood restoration.',
+            ' examine sustainability and benefit-sharing mechanisms in the context of the Theun-Hinboun Expansion Project (THXP) in central Laos. THXP has been planned and implemented in accordance with international good practice, and is now at the stage of preparing for closure on a number of key issues, in particular on livelihood restoration.':' examine sustainability and benefit-sharing mechanisms in the context of the Theun-Hinboun Expansion Project (THXP) in central Laos. THXP has been planned and implemented in accordance with international good practice, and is now at the stage of preparing for closure on a number of key issues, in particular on livelihood restoration.',
+            'THPC VILLAGE C-2 ສັນຍາ: 19 ອາຄານ, ເຮືອນພັກ ແລະ ຫ້ອງການ, ຖະຫນົນຫົນທາງ, ທິວທັດ ແລະ ເຄື່ອງໃຊ້ທັງຫມົດ.':'THPC VILLAGE CONTRACT C-2: 19 HOUSINGS AND OFFICE BUILDING, ROADS,LANDSCAPING AND ALL UTILITIES SYSTEM',
+            'THPC VILLAGE CONTRACT C-2: 19 HOUSINGS AND OFFICE BUILDING, ROADS,LANDSCAPING AND ALL UTILITIES SYSTEM':'THPC VILLAGE CONTRACT C-2: 19 HOUSINGS AND OFFICE BUILDING, ROADS,LANDSCAPING AND ALL UTILITIES SYSTEM',
+            'ຖັງປິ່ນປົວນ້ໍາເສຍ DEWAT ສໍາລັບ 1000ຄົນ ທີ່ໂຮງໄຟຟ້າOperator Village THPC':'DEWAT Waste Water Treatment Tanks for 1000persons at Operator Village THPC Power Plant',
+            'DEWAT Waste Water Treatment Tanks for 1000persons at Operator Village THPC Power Plant':'DEWAT Waste Water Treatment Tanks for 1000persons at Operator Village THPC Power Plant',
+            'ວຽກງານປ້ອງກັນດິນເຈື່ອນຢູ່ທີ່ THASALA ສຳລັບຖະໜົນ ແລະ TOWER LINE':'SLOPE PROTECTION WORK AT THASALA FOR ROAD AND TOWER LINE ',
+            'SLOPE PROTECTION WORK AT THASALA FOR ROAD AND TOWER LINE ':'SLOPE PROTECTION WORK AT THASALA FOR ROAD AND TOWER LINE ',
+            'ຝົນຕົກໜັກໃນປີ 2018 ເຮັດໃຫ້ເກີດດິນເຈື່ອນລົງເທິງຕາໜ່າງເສັ້ນທາງ ແລະ ໄດ້ມີການກວດກາຄືນການປະຕິບັດສະຖານທີ່ທົດລອງປ້ອງກັນຄວາມໝັ້ນຄົງທາງເນີນ.':'Heavy rains in 2018 caused numerous landslides on the road network and a review was undertaken of the performance of the slope stabilization trial sites implemented.',
+            'Heavy rains in 2018 caused numerous landslides on the road network and a review was undertaken of the performance of the slope stabilization trial sites implemented.':'Heavy rains in 2018 caused numerous landslides on the road network and a review was undertaken of the performance of the slope stabilization trial sites implemented.',
+            'CLEANING OF SEDIMENTS FROM STOP LOG GATES, DRAFT TUBE UNIT 2 AT NG POWERHOUSE OF THXP PROJECT BY SAND PUMP 8”':'CLEANING OF SEDIMENTS FROM STOP LOG GATES, DRAFT TUBE UNIT 2 AT NG POWERHOUSE OF THXP PROJECT BY SAND PUMP 8”',
+            'ການທຳຄວາມສະອາດຕະກອນຈາກປະຕູ STOP LOG,ຮ່າງທໍ່ໜ່ວຍທີ2 ທີ່ THXP Project NG POWERHOUSE BY SAND PUMP 8”':'CLEANING OF SEDIMENTS FROM STOP LOG GATES, DRAFT TUBE UNIT 2 AT NG POWERHOUSE OF THXP PROJECT BY SAND PUMP 8”',
+            'ໃນປີ 2016-17 ເຄື່ອງຈັກ THPC ເດີມໄດ້ຖືກທົດແທນດ້ວຍ turbines ໃໝ່ ແລະມີປະສິດທິພາບຫຼາຍຂຶ້ນ, ເຮັດໃຫ້ກຳລັງການຜະລິດລວມຂອງ THPC ເປັນ 520 MW, ນ້ຳຈາກອ່າງເກັບນ້ຳໃໝ່ຫຼາຍແມ່ນໃຊ້ເພື່ອຜະລິດພະລັງງານສອງຄັ້ງ.':'In 2016-17 the turbines in the original TH Units were replaced with a new and more efficient turbines, bringing the total combined generating capacity of THPC to 520 MW, with much of the water from the new reservoir being used to generate power twice.',
+            'In 2016-17 the turbines in the original TH Units were replaced with a new and more efficient turbines, bringing the total combined generating capacity of THPC to 520 MW, with much of the water from the new reservoir being used to generate power twice.':'In 2016-17 the turbines in the original TH Units were replaced with a new and more efficient turbines, bringing the total combined generating capacity of THPC to 520 MW, with much of the water from the new reservoir being used to generate power twice.',
+            'ໂຄງການ​ ກໍ່ສ້າງ ແລະ ຂະຫຍາຍ Feeder 22 kV ສະຖານີ​ໄຟຟ້າແຮງສູງ 115kV': 'THE CONSTRUCTION OF 115 + 22KV PAKSONG SUBSTATION FOR EXPANSION FEEDER',
+            'THE CONSTRUCTION OF 115 + 22KV PAKSONG SUBSTATION FOR EXPANSION FEEDER': 'THE CONSTRUCTION OF 115 + 22KV PAKSONG SUBSTATION FOR EXPANSION FEEDER',
+            '​ໂຄງການ​ດັ່ງກ່າວ​ຈະ​ກໍ່ສ້າງ​ສາຍ​ສົ່ງ 115 ກິ​ໂລ​ໂວນ ​ແຮງ​ດັນ 115 ກິ​ໂລ​ໂວນ (kV) ​ໃນ​ໄລຍະ 398 ກິ​ໂລ​ແມັດ ​ພ້ອມ​ກັບ​ສະຖານີ​ຍ່ອຍ 115/22 kV ​ແລະ ກໍ່ສ້າງ​ສາຍ​ສົ່ງ​ແຮງ​ດັນ​ກາງ ​ແລະ ແຮງ​ດັນ​ຕ່ຳ 22 ກິ​ໂລ​ໂວນ ຍາວ 1,100 ກິ​ໂລ​ແມັດ ​ເພື່ອ​ຂະຫຍາຍ​ການ​ເຂົ້າ​ເຖິງ ຕາຂ່າຍໄຟຟ້າໃຫ້ແກ່ຜູ້ບໍລິໂພກ':'The project will (i) construct 398 kilometers (km) of 115-kilovolt (kV) transmission lines with associated 115/22 kV substations, and erect about 1,100 km of new 22 kV medium- and low-voltage distribution lines to expand access to grid electricity to consumers',
+            'The project will (i) construct 398 kilometers (km) of 115-kilovolt (kV) transmission lines with associated 115/22 kV substations, and erect about 1,100 km of new 22 kV medium- and low-voltage distribution lines to expand access to grid electricity to consumers':'The project will (i) construct 398 kilometers (km) of 115-kilovolt (kV) transmission lines with associated 115/22 kV substations, and erect about 1,100 km of new 22 kV medium- and low-voltage distribution lines to expand access to grid electricity to consumers',
+            'ການກໍ່ສ້າງສະຖານີໄຟຟ້າປາກຊ່ອງ2 ຂະໜາດ115KV ແລະ ໂຮງງານBitcoin': 'THE CONSTRUCTION OF 115KV PAKMONG 2 STATION AND BITCOIN FACTORY',
+            'THE CONSTRUCTION OF 115KV PAKMONG 2 STATION AND BITCOIN FACTORY': 'THE CONSTRUCTION OF 115KV PAKMONG 2 STATION AND BITCOIN FACTORY',
+            'Survey-design and construction installation of 115kV (50MW) high-voltage power station, 10 4000kVA/3Ph battery and 22kV power grid to serve the Bitcoin manufacturing plant.Location: PakMong Village, Numbark District, LuangPabang Province.':'Survey-design and construction installation of 115kV (50MW) high-voltage power station, 10 4000kVA/3Ph battery and 22kV power grid to serve the Bitcoin manufacturing plant.Location: PakMong Village, Numbark District, LuangPabang Province.',
+            'ສຳຫລວດ-ອອກແບບ ແລະ​ ກໍ່ສ້າງຕິດຕັ້ງ ສະຖານີໄຟຟ້າແຮງສູງ 115kV​ (50MW), ຫມໍ້ແປງ​ 4000kVA/3Ph ຈຳນວນ​ 10​ ໜ່ວຍ ແລະ​ ຕາຂ່າຍໄຟຟ້າ 22kV​ ເພື່ອຮັບໃຊ້ໂຮງງານຜະລິດ Bitcoin.ສະຖານທີ: ບ້ານປາກມອງ,​ ເມືອງນ້ຳບາກ,​ ແຂວງຫລວງພະບາງ.':'Survey-design and construction installation of 115kV (50MW) high-voltage power station, 10 4000kVA/3Ph battery and 22kV power grid to serve the Bitcoin manufacturing plant.Location: PakMong Village, Numbark District, LuangPabang Province.',
+            'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV':'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV',
+            'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV':'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV',
+            'The 315kVA/3Ph battery migration project, the construction of a 22kV medium-voltage electricity grid and the installation of 01 electrical circuits (315kVA/3Ph) to serve the Limited Development Company, location: Jormany Village, Jormany District, Vientian Province.':'The 315kVA/3Ph battery migration project, the construction of a 22kV medium-voltage electricity grid and the installation of 01 electrical circuits (315kVA/3Ph) to serve the Limited Development Company, location: Jormany Village, Jormany District, Vientian Province.',
+            'ໂຄງການ ຍົກຍ້າຍຫມໍ້້ແປງ 315kVA/3Ph, ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ລະບົບ (315kVA/3Ph) ເພື່ອຮັບໃຊ້ ບໍລິສັດ ລາດຊະວົງ ພັດທະນາ ຈຳກັດ, ສະຖານທີ່: ບ້ານຈອມມະນີ​,​ ເມືອງຈັນທະບູລີ,​ ນະຄອນຫລວງວຽງຈັນ.':'The 315kVA/3Ph battery migration project, the construction of a 22kV medium-voltage electricity grid and the installation of 01 electrical circuits (315kVA/3Ph) to serve the Limited Development Company, location: Jormany Village, Jormany District, Vientian Province.',
+            'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER':'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER',
+            'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER':'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER',
+            'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (100kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Blue​ Dot EV Charger​ Station ຈຳນວນ​ 2​ ລະບົບ ເພື່ອຮັບໃຊ້ບໍລິສັດ ລາວທານີກົນຈັກໜັກ ຈຳກັດຜູ້ດຽວ, ສະຖານທີ່: ຮ້ານອາຫານ River moon​,​ ເມືອງສັງທອງ,​ ນະຄອນຫລວງວຽງຈັນ.':'Construction of a 22kV medium-voltage electricity grid and installing 01 sets of electrical circuits (100kVA/3Ph) with two Blue Dot EV Charger Station boards to serve a single limited heavy machinery company, location: River Moon Restaurant, Sangthong District, Vientian Province.',
+            'Construction of a 22kV medium-voltage electricity grid and installing 01 sets of electrical circuits (100kVA/3Ph) with two Blue Dot EV Charger Station boards to serve a single limited heavy machinery company, location: River Moon Restaurant, Sangthong District, Vientian Province.':'Construction of a 22kV medium-voltage electricity grid and installing 01 sets of electrical circuits (100kVA/3Ph) with two Blue Dot EV Charger Station boards to serve a single limited heavy machinery company, location: River Moon Restaurant, Sangthong District, Vientian Province.',
+            'THE CONSTRUCTION OF UNDERGROUND 22KV + FIBER OPTIC AND ELECTRICAL SWITCHGEAR SIZE 630 AMP':'THE CONSTRUCTION OF UNDERGROUND 22KV + FIBER OPTIC AND ELECTRICAL SWITCHGEAR SIZE 630 AMP',
+            'ການກໍ່ສ້າງໃຕ້ດິນ 22KV + ໄຟເບີອັອບຕິກ ແລະ ສະວິດເກຍໄຟຟ້າ ຂະໜາດ 630 ແອັມ(AMP)':'THE CONSTRUCTION OF UNDERGROUND 22KV + FIBER OPTIC AND ELECTRICAL SWITCHGEAR SIZE 630 AMP',
+            'The project takes the 0,4/22kV electric grid and the fiber optic cable to the ground with a 630 Amp LT Electrical Switchgear, location: South 13th Street, Main16, SangHin Village, Saythany District, Vientian Province.':'The project takes the 0,4/22kV electric grid and the fiber optic cable to the ground with a 630 Amp LT Electrical Switchgear, location: South 13th Street, Main16, SangHin Village, Saythany District, Vientian Province.',
+            'ໂຄງການ ເອົາຕາຂ່າຍໄຟຟ້າ 0,4/22kV ແລະ ສາຍໄຟອັອບຕິກລົງດິນ ພ້ອມດ້ວຍຕູ້ LT Electrical Switchgear ຂະຫນາດ 630 Amp, ສະຖານທີ: ຖະໜົນ13ໃຕ້,ຫຼັກ16, ບ້ານສາງຫີນ, ເມືອງໄຊທານີ, ນະຄອນຫລວງວຽງຈັນ.':'The project takes the 0,4/22kV electric grid and the fiber optic cable to the ground with a 630 Amp LT Electrical Switchgear, location: South 13th Street, Main16, SangHin Village, Saythany District, Vientian Province.',
+            'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND LOCA EV FAST CHARGER':'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND LOCA EV FAST CHARGER',
+            'ການສະຫນອງ ແລະ ຕິດຕັ້ງ TR 250KVA + 22KV ແລະ LOCA EV FAST CHARGER':'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND LOCA EV FAST CHARGER',
+            'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (160kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Loca Fast Charge 120kW, ສະຖານທີ່: ບ້ານສົມສະອາດ,​ ເມືອງທ່າແຂກ,​ ແຂວງຄຳມ່ວນ.':'Construction of a 22kV medium-voltage electricity grid and installation of 01 sets of electrical circuits (160kVA/3Ph) with the Loca Fast Charge 120kW, location: Somsaeard Village, Thakhaek District, Khammuan Province.',
+            'Construction of a 22kV medium-voltage electricity grid and installation of 01 sets of electrical circuits (160kVA/3Ph) with the Loca Fast Charge 120kW, location: Somsaeard Village, Thakhaek District, Khammuan Province.':'Construction of a 22kV medium-voltage electricity grid and installation of 01 sets of electrical circuits (160kVA/3Ph) with the Loca Fast Charge 120kW, location: Somsaeard Village, Thakhaek District, Khammuan Province.',
+'THE SUPPLY AND INSTALLATION OF TR 800KVA + MDB + 22KV TRANSMISSION LINE':'THE SUPPLY AND INSTALLATION OF TR 800KVA + MDB + 22KV TRANSMISSION LINE',
+'ການສະໜອງ ແລະ ຕິດຕັ້ງສາຍສົ່ງTR 800KVA + MDB + 22KV':'THE SUPPLY AND INSTALLATION OF TR 800KVA + MDB + 22KV TRANSMISSION LINE',
+'The installation of 01 sets of electrical batteries and MDB boards (800kVA/3Ph) to serve the Ottovin (KOLAO) Branch 1, Location: T2 Road, KhounTa Village, SeeKhottaBong District, Vientian Province.':'The installation of 01 sets of electrical batteries and MDB boards (800kVA/3Ph) to serve the Ottovin (KOLAO) Branch 1, Location: T2 Road, KhounTa Village, SeeKhottaBong District, Vientian Province.',
+'ໂຄງການ​ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ​ ແລະ​ ຕູ້​ MDB ຈຳນວນ 01 ຊຸດ (800kVA/3Ph) ເພື່ອຮັບໃຊ້​ ບໍລິສັດ​ ໂອໂຕເວີນດ໌ (KOLAO)​ ສາຂາທີ ​1, ສະຖານທີ: ຖະໜົນ​ T2,​ ບ້ານຂຸນຕາ,​ເມືອງສີໂຄດຕະບອງ,​ ນະຄອນຫລວງວຽງຈັນ.​':'The installation of 01 sets of electrical batteries and MDB boards (800kVA/3Ph) to serve the Ottovin (KOLAO) Branch 1, Location: T2 Road, KhounTa Village, SeeKhottaBong District, Vientian Province.',
+'THE SUPPLY AND INSTALLATION OF TR 50KVA/3PHASE':'THE SUPPLY AND INSTALLATION OF TR 50KVA/3PHASE',
+'ການສະຫນອງ ແລະ ການຕິດຕັ້ງTR 50KVA/3PHASE':'THE SUPPLY AND INSTALLATION OF TR 50KVA/3PHASE',
+'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍໝໍ້ແປງ 50kVA ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ສາຂາໂພນປາເປົ້າ​ ສະຖານທີ: ບ້ານໂພນປາເປົ້່າ,​ ເມືອງສີສັດຕະນາກ,​ ນະຄອນຫລວງວຽງຈັນ.':'The 50kVA supply and replacement program to serve the Mini big C branch of the target fish ingestion location: Ponpapao Village, SySattanark District ,Vientian Province',
+'The 50kVA supply and replacement program to serve the Mini big C branch of the target fish ingestion location: Ponpapao Village, SySattanark District ,Vientian Province':'The 50kVA supply and replacement program to serve the Mini big C branch of the target fish ingestion location: Ponpapao Village, SySattanark District ,Vientian Province',
+'THE SUPPLY AND INSTALLATION OF BILLBOARD AT MINI BIG C':'THE SUPPLY AND INSTALLATION OF BILLBOARD AT MINI BIG C',
+'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ BILLBOARD ທີ່ MINI BIG C':'THE SUPPLY AND INSTALLATION OF BILLBOARD AT MINI BIG C',
+'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍດອກໄຟປ້າຍ ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ຈຳນວນ 09 ສາຂາ​ ສະຖານທີ: ນະຄອນຫລວງວຽງຈັນ.':'The project provides and replaces the signature lights to serve the Mini big C company of 09 location branches: Vientian Province',
+'The project provides and replaces the signature lights to serve the Mini big C company of 09 location branches: Vientian Province':'The project provides and replaces the signature lights to serve the Mini big C company of 09 location branches: Vientian Province',
+
+
+
+        },
+        'la': {
+          'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'ຂ່າວສານ',
+            'ຂ່າວສານ':'ຂ່າວສານ',
+            'Hydropower Dam Project':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'The achievements':'ຜົນສຳເລັດ',
+            'ຜົນສຳເລັດ':'ຜົນສຳເລັດ',
+            'About':'ກ່ຽວກັບ',
+            'ກ່ຽວກັບ':'ກ່ຽວກັບ',
+            'Contact':'ຕິດຕໍ່',
+            'ຕິດຕໍ່':'ຕິດຕໍ່',
+
+            'RECONSTRUCTION OF FOUNDATION AND COLUMN FOR NAMHAI BRIDGE':'ການຟື້ນຟູຮາກຖານ ແລະ ເສົາຄໍ້າສໍາລັບຂົວນ້ຳໄຮ່',
+            'ການຟື້ນຟູຮາກຖານ ແລະ ເສົາຄໍ້າສໍາລັບຂົວນ້ຳໄຮ່':'ການຟື້ນຟູຮາກຖານ ແລະ ເສົາຄໍ້າສໍາລັບຂົວນ້ຳໄຮ່',
+            ' examine sustainability and benefit-sharing mechanisms in the context of the Theun-Hinboun Expansion Project (THXP) in central Laos. THXP has been planned and implemented in accordance with international good practice, and is now at the stage of preparing for closure on a number of key issues, in particular on livelihood restoration.':' ກວດສອບກົນໄກຄວາມຍືນຍົງ ແລະ ການແບ່ງປັນຜົນປະໂຫຍດ ໃນເນື້ອໃນຂອງໂຄງການຂະຫຍາຍໂຕTheun-Hinboun (THXP) ໃນພາກກາງຂອງລາວ. THXP ໄດ້ມີການວາງແຜນ ແລະ ຈັດຕັ້ງປະຕິບັດຕາມການປະຕິບັດທີ່ດີຂອງສາກົນ, ແລະ ປັດຈຸບັນແມ່ນຢູ່ໃນຂັ້ນຕອນການກະກຽມປິດບັນຫາສໍາຄັນຈໍານວນຫນຶ່ງ, ໂດຍສະເພາະແມ່ນກ່ຽວກັບການຟື້ນຟູຊີວິດການເປັນຢູ່.',
+            ' ກວດສອບກົນໄກຄວາມຍືນຍົງ ແລະ ການແບ່ງປັນຜົນປະໂຫຍດ ໃນເນື້ອໃນຂອງໂຄງການຂະຫຍາຍໂຕTheun-Hinboun (THXP) ໃນພາກກາງຂອງລາວ. THXP ໄດ້ມີການວາງແຜນ ແລະ ຈັດຕັ້ງປະຕິບັດຕາມການປະຕິບັດທີ່ດີຂອງສາກົນ, ແລະ ປັດຈຸບັນແມ່ນຢູ່ໃນຂັ້ນຕອນການກະກຽມປິດບັນຫາສໍາຄັນຈໍານວນຫນຶ່ງ, ໂດຍສະເພາະແມ່ນກ່ຽວກັບການຟື້ນຟູຊີວິດການເປັນຢູ່.':' ກວດສອບກົນໄກຄວາມຍືນຍົງ ແລະ ການແບ່ງປັນຜົນປະໂຫຍດ ໃນເນື້ອໃນຂອງໂຄງການຂະຫຍາຍໂຕTheun-Hinboun (THXP) ໃນພາກກາງຂອງລາວ. THXP ໄດ້ມີການວາງແຜນ ແລະ ຈັດຕັ້ງປະຕິບັດຕາມການປະຕິບັດທີ່ດີຂອງສາກົນ, ແລະ ປັດຈຸບັນແມ່ນຢູ່ໃນຂັ້ນຕອນການກະກຽມປິດບັນຫາສໍາຄັນຈໍານວນຫນຶ່ງ, ໂດຍສະເພາະແມ່ນກ່ຽວກັບການຟື້ນຟູຊີວິດການເປັນຢູ່.',
+            'THPC VILLAGE CONTRACT C-2: 19 HOUSINGS AND OFFICE BUILDING, ROADS,LANDSCAPING AND ALL UTILITIES SYSTEM':'THPC VILLAGE C-2 ສັນຍາ: 19 ອາຄານ, ເຮືອນພັກ ແລະ ຫ້ອງການ, ຖະຫນົນຫົນທາງ, ທິວທັດ ແລະ ເຄື່ອງໃຊ້ທັງຫມົດ.',
+            'THPC VILLAGE C-2 ສັນຍາ: 19 ອາຄານ, ເຮືອນພັກ ແລະ ຫ້ອງການ, ຖະຫນົນຫົນທາງ, ທິວທັດ ແລະ ເຄື່ອງໃຊ້ທັງຫມົດ.':'THPC VILLAGE C-2 ສັນຍາ: 19 ອາຄານ, ເຮືອນພັກ ແລະ ຫ້ອງການ, ຖະຫນົນຫົນທາງ, ທິວທັດ ແລະ ເຄື່ອງໃຊ້ທັງຫມົດ.',
+            'DEWAT Waste Water Treatment Tanks for 1000persons at Operator Village THPC Power Plant': 'ຖັງປິ່ນປົວນ້ໍາເສຍ DEWAT ສໍາລັບ 1000ຄົນ ທີ່ໂຮງໄຟຟ້າOperator Village THPC',
+            'ຖັງປິ່ນປົວນ້ໍາເສຍ DEWAT ສໍາລັບ 1000ຄົນ ທີ່ໂຮງໄຟຟ້າOperator Village THPC': 'ຖັງປິ່ນປົວນ້ໍາເສຍ DEWAT ສໍາລັບ 1000ຄົນ ທີ່ໂຮງໄຟຟ້າOperator Village THPC',
+            'SLOPE PROTECTION WORK AT THASALA FOR ROAD AND TOWER LINE ':'ວຽກງານປ້ອງກັນດິນເຈື່ອນຢູ່ທີ່ THASALA ສຳລັບຖະໜົນ ແລະ TOWER LINE',
+            'ວຽກງານປ້ອງກັນດິນເຈື່ອນຢູ່ທີ່ THASALA ສຳລັບຖະໜົນ ແລະ TOWER LINE':'ວຽກງານປ້ອງກັນດິນເຈື່ອນຢູ່ທີ່ THASALA ສຳລັບຖະໜົນ ແລະ TOWER LINE',
+            'ຝົນຕົກໜັກໃນປີ 2018 ເຮັດໃຫ້ເກີດດິນເຈື່ອນລົງເທິງຕາໜ່າງເສັ້ນທາງ ແລະ ໄດ້ມີການກວດກາຄືນການປະຕິບັດສະຖານທີ່ທົດລອງປ້ອງກັນຄວາມໝັ້ນຄົງທາງເນີນ.':'ຝົນຕົກໜັກໃນປີ 2018 ເຮັດໃຫ້ເກີດດິນເຈື່ອນລົງເທິງຕາໜ່າງເສັ້ນທາງ ແລະ ໄດ້ມີການກວດກາຄືນການປະຕິບັດສະຖານທີ່ທົດລອງປ້ອງກັນຄວາມໝັ້ນຄົງທາງເນີນ.',
+            'Heavy rains in 2018 caused numerous landslides on the road network and a review was undertaken of the performance of the slope stabilization trial sites implemented.':'ຝົນຕົກໜັກໃນປີ 2018 ເຮັດໃຫ້ເກີດດິນເຈື່ອນລົງເທິງຕາໜ່າງເສັ້ນທາງ ແລະ ໄດ້ມີການກວດກາຄືນການປະຕິບັດສະຖານທີ່ທົດລອງປ້ອງກັນຄວາມໝັ້ນຄົງທາງເນີນ.',
+            'CLEANING OF SEDIMENTS FROM STOP LOG GATES, DRAFT TUBE UNIT 2 AT NG POWERHOUSE OF THXP PROJECT BY SAND PUMP 8”':'ການທຳຄວາມສະອາດຕະກອນຈາກປະຕູ STOP LOG,ຮ່າງທໍ່ໜ່ວຍທີ2 ທີ່ THXP Project NG POWERHOUSE BY SAND PUMP 8”',
+            'ການທຳຄວາມສະອາດຕະກອນຈາກປະຕູ STOP LOG,ຮ່າງທໍ່ໜ່ວຍທີ2 ທີ່ THXP Project NG POWERHOUSE BY SAND PUMP 8”':'ການທຳຄວາມສະອາດຕະກອນຈາກປະຕູ STOP LOG,ຮ່າງທໍ່ໜ່ວຍທີ2 ທີ່ THXP Project NG POWERHOUSE BY SAND PUMP 8”',
+            'In 2016-17 the turbines in the original TH Units were replaced with a new and more efficient turbines, bringing the total combined generating capacity of THPC to 520 MW, with much of the water from the new reservoir being used to generate power twice.':'ໃນປີ 2016-17 ເຄື່ອງຈັກ THPC ເດີມໄດ້ຖືກທົດແທນດ້ວຍ turbines ໃໝ່ ແລະມີປະສິດທິພາບຫຼາຍຂຶ້ນ, ເຮັດໃຫ້ກຳລັງການຜະລິດລວມຂອງ THPC ເປັນ 520 MW, ນ້ຳຈາກອ່າງເກັບນ້ຳໃໝ່ຫຼາຍແມ່ນໃຊ້ເພື່ອຜະລິດພະລັງງານສອງຄັ້ງ.',
+            'ໃນປີ 2016-17 ເຄື່ອງຈັກ THPC ເດີມໄດ້ຖືກທົດແທນດ້ວຍ turbines ໃໝ່ ແລະມີປະສິດທິພາບຫຼາຍຂຶ້ນ, ເຮັດໃຫ້ກຳລັງການຜະລິດລວມຂອງ THPC ເປັນ 520 MW, ນ້ຳຈາກອ່າງເກັບນ້ຳໃໝ່ຫຼາຍແມ່ນໃຊ້ເພື່ອຜະລິດພະລັງງານສອງຄັ້ງ.':'ໃນປີ 2016-17 ເຄື່ອງຈັກ THPC ເດີມໄດ້ຖືກທົດແທນດ້ວຍ turbines ໃໝ່ ແລະມີປະສິດທິພາບຫຼາຍຂຶ້ນ, ເຮັດໃຫ້ກຳລັງການຜະລິດລວມຂອງ THPC ເປັນ 520 MW, ນ້ຳຈາກອ່າງເກັບນ້ຳໃໝ່ຫຼາຍແມ່ນໃຊ້ເພື່ອຜະລິດພະລັງງານສອງຄັ້ງ.',
+            'THE CONSTRUCTION OF 115 + 22KV PAKSONG SUBSTATION FOR EXPANSION FEEDER':'ໂຄງການ​ ກໍ່ສ້າງ ແລະ ຂະຫຍາຍ Feeder 22 kV ສະຖານີ​ໄຟຟ້າແຮງສູງ 115kV',
+            'ໂຄງການ​ ກໍ່ສ້າງ ແລະ ຂະຫຍາຍ Feeder 22 kV ສະຖານີ​ໄຟຟ້າແຮງສູງ 115kV':'ໂຄງການ​ ກໍ່ສ້າງ ແລະ ຂະຫຍາຍ Feeder 22 kV ສະຖານີ​ໄຟຟ້າແຮງສູງ 115kV',
+            'The project will (i) construct 398 kilometers (km) of 115-kilovolt (kV) transmission lines with associated 115/22 kV substations, and erect about 1,100 km of new 22 kV medium- and low-voltage distribution lines to expand access to grid electricity to consumers':'​ໂຄງການ​ດັ່ງກ່າວ​ຈະ​ກໍ່ສ້າງ​ສາຍ​ສົ່ງ 115 ກິ​ໂລ​ໂວນ ​ແຮງ​ດັນ 115 ກິ​ໂລ​ໂວນ (kV) ​ໃນ​ໄລຍະ 398 ກິ​ໂລ​ແມັດ ​ພ້ອມ​ກັບ​ສະຖານີ​ຍ່ອຍ 115/22 kV ​ແລະ ກໍ່ສ້າງ​ສາຍ​ສົ່ງ​ແຮງ​ດັນ​ກາງ ​ແລະ ແຮງ​ດັນ​ຕ່ຳ 22 ກິ​ໂລ​ໂວນ ຍາວ 1,100 ກິ​ໂລ​ແມັດ ​ເພື່ອ​ຂະຫຍາຍ​ການ​ເຂົ້າ​ເຖິງ ຕາຂ່າຍໄຟຟ້າໃຫ້ແກ່ຜູ້ບໍລິໂພກ',
+            '​ໂຄງການ​ດັ່ງກ່າວ​ຈະ​ກໍ່ສ້າງ​ສາຍ​ສົ່ງ 115 ກິ​ໂລ​ໂວນ ​ແຮງ​ດັນ 115 ກິ​ໂລ​ໂວນ (kV) ​ໃນ​ໄລຍະ 398 ກິ​ໂລ​ແມັດ ​ພ້ອມ​ກັບ​ສະຖານີ​ຍ່ອຍ 115/22 kV ​ແລະ ກໍ່ສ້າງ​ສາຍ​ສົ່ງ​ແຮງ​ດັນ​ກາງ ​ແລະ ແຮງ​ດັນ​ຕ່ຳ 22 ກິ​ໂລ​ໂວນ ຍາວ 1,100 ກິ​ໂລ​ແມັດ ​ເພື່ອ​ຂະຫຍາຍ​ການ​ເຂົ້າ​ເຖິງ ຕາຂ່າຍໄຟຟ້າໃຫ້ແກ່ຜູ້ບໍລິໂພກ':'​ໂຄງການ​ດັ່ງກ່າວ​ຈະ​ກໍ່ສ້າງ​ສາຍ​ສົ່ງ 115 ກິ​ໂລ​ໂວນ ​ແຮງ​ດັນ 115 ກິ​ໂລ​ໂວນ (kV) ​ໃນ​ໄລຍະ 398 ກິ​ໂລ​ແມັດ ​ພ້ອມ​ກັບ​ສະຖານີ​ຍ່ອຍ 115/22 kV ​ແລະ ກໍ່ສ້າງ​ສາຍ​ສົ່ງ​ແຮງ​ດັນ​ກາງ ​ແລະ ແຮງ​ດັນ​ຕ່ຳ 22 ກິ​ໂລ​ໂວນ ຍາວ 1,100 ກິ​ໂລ​ແມັດ ​ເພື່ອ​ຂະຫຍາຍ​ການ​ເຂົ້າ​ເຖິງ ຕາຂ່າຍໄຟຟ້າໃຫ້ແກ່ຜູ້ບໍລິໂພກ',
+            'THE CONSTRUCTION OF 115KV PAKMONG 2 STATION AND BITCOIN FACTORY':'ການກໍ່ສ້າງສະຖານີໄຟຟ້າປາກຊ່ອງ2 ຂະໜາດ115KV ແລະ ໂຮງງານBitcoin',
+            'ການກໍ່ສ້າງສະຖານີໄຟຟ້າປາກຊ່ອງ2 ຂະໜາດ115KV ແລະ ໂຮງງານBitcoin':'ການກໍ່ສ້າງສະຖານີໄຟຟ້າປາກຊ່ອງ2 ຂະໜາດ115KV ແລະ ໂຮງງານBitcoin',
+            'Survey-design and construction installation of 115kV (50MW) high-voltage power station, 10 4000kVA/3Ph battery and 22kV power grid to serve the Bitcoin manufacturing plant.Location: PakMong Village, Numbark District, LuangPabang Province.':'ສຳຫລວດ-ອອກແບບ ແລະ​ ກໍ່ສ້າງຕິດຕັ້ງ ສະຖານີໄຟຟ້າແຮງສູງ 115kV​ (50MW), ຫມໍ້ແປງ​ 4000kVA/3Ph ຈຳນວນ​ 10​ ໜ່ວຍ ແລະ​ ຕາຂ່າຍໄຟຟ້າ 22kV​ ເພື່ອຮັບໃຊ້ໂຮງງານຜະລິດ Bitcoin.ສະຖານທີ: ບ້ານປາກມອງ,​ ເມືອງນ້ຳບາກ,​ ແຂວງຫລວງພະບາງ.',
+            'ສຳຫລວດ-ອອກແບບ ແລະ​ ກໍ່ສ້າງຕິດຕັ້ງ ສະຖານີໄຟຟ້າແຮງສູງ 115kV​ (50MW), ຫມໍ້ແປງ​ 4000kVA/3Ph ຈຳນວນ​ 10​ ໜ່ວຍ ແລະ​ ຕາຂ່າຍໄຟຟ້າ 22kV​ ເພື່ອຮັບໃຊ້ໂຮງງານຜະລິດ Bitcoin.ສະຖານທີ: ບ້ານປາກມອງ,​ ເມືອງນ້ຳບາກ,​ ແຂວງຫລວງພະບາງ.':'ສຳຫລວດ-ອອກແບບ ແລະ​ ກໍ່ສ້າງຕິດຕັ້ງ ສະຖານີໄຟຟ້າແຮງສູງ 115kV​ (50MW), ຫມໍ້ແປງ​ 4000kVA/3Ph ຈຳນວນ​ 10​ ໜ່ວຍ ແລະ​ ຕາຂ່າຍໄຟຟ້າ 22kV​ ເພື່ອຮັບໃຊ້ໂຮງງານຜະລິດ Bitcoin.ສະຖານທີ: ບ້ານປາກມອງ,​ ເມືອງນ້ຳບາກ,​ ແຂວງຫລວງພະບາງ.',
+            'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV',
+            'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV',
+            'The 315kVA/3Ph battery migration project, the construction of a 22kV medium-voltage electricity grid and the installation of 01 electrical circuits (315kVA/3Ph) to serve the Limited Development Company, location: Jormany Village, Jormany District, Vientian Province.':'ໂຄງການ ຍົກຍ້າຍຫມໍ້້ແປງ 315kVA/3Ph, ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ລະບົບ (315kVA/3Ph) ເພື່ອຮັບໃຊ້ ບໍລິສັດ ລາດຊະວົງ ພັດທະນາ ຈຳກັດ, ສະຖານທີ່: ບ້ານຈອມມະນີ​,​ ເມືອງຈັນທະບູລີ,​ ນະຄອນຫລວງວຽງຈັນ.',
+            'ໂຄງການ ຍົກຍ້າຍຫມໍ້້ແປງ 315kVA/3Ph, ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ລະບົບ (315kVA/3Ph) ເພື່ອຮັບໃຊ້ ບໍລິສັດ ລາດຊະວົງ ພັດທະນາ ຈຳກັດ, ສະຖານທີ່: ບ້ານຈອມມະນີ​,​ ເມືອງຈັນທະບູລີ,​ ນະຄອນຫລວງວຽງຈັນ.':'ໂຄງການ ຍົກຍ້າຍຫມໍ້້ແປງ 315kVA/3Ph, ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ລະບົບ (315kVA/3Ph) ເພື່ອຮັບໃຊ້ ບໍລິສັດ ລາດຊະວົງ ພັດທະນາ ຈຳກັດ, ສະຖານທີ່: ບ້ານຈອມມະນີ​,​ ເມືອງຈັນທະບູລີ,​ ນະຄອນຫລວງວຽງຈັນ.',
+            'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER',
+            'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ TR 250KVA + 22KV AND BLUEDOT EV FAST CHARGER',
+            'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (100kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Blue​ Dot EV Charger​ Station ຈຳນວນ​ 2​ ລະບົບ ເພື່ອຮັບໃຊ້ບໍລິສັດ ລາວທານີກົນຈັກໜັກ ຈຳກັດຜູ້ດຽວ, ສະຖານທີ່: ຮ້ານອາຫານ River moon​,​ ເມືອງສັງທອງ,​ ນະຄອນຫລວງວຽງຈັນ.':'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (100kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Blue​ Dot EV Charger​ Station ຈຳນວນ​ 2​ ລະບົບ ເພື່ອຮັບໃຊ້ບໍລິສັດ ລາວທານີກົນຈັກໜັກ ຈຳກັດຜູ້ດຽວ, ສະຖານທີ່: ຮ້ານອາຫານ River moon​,​ ເມືອງສັງທອງ,​ ນະຄອນຫລວງວຽງຈັນ.',
+            'Construction of a 22kV medium-voltage electricity grid and installing 01 sets of electrical circuits (100kVA/3Ph) with two Blue Dot EV Charger Station boards to serve a single limited heavy machinery company, location: River Moon Restaurant, Sangthong District, Vientian Province.':'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (100kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Blue​ Dot EV Charger​ Station ຈຳນວນ​ 2​ ລະບົບ ເພື່ອຮັບໃຊ້ບໍລິສັດ ລາວທານີກົນຈັກໜັກ ຈຳກັດຜູ້ດຽວ, ສະຖານທີ່: ຮ້ານອາຫານ River moon​,​ ເມືອງສັງທອງ,​ ນະຄອນຫລວງວຽງຈັນ.',
+            'THE CONSTRUCTION OF UNDERGROUND 22KV + FIBER OPTIC AND ELECTRICAL SWITCHGEAR SIZE 630 AMP':'ການກໍ່ສ້າງໃຕ້ດິນ 22KV + ໄຟເບີອັອບຕິກ ແລະ ສະວິດເກຍໄຟຟ້າ ຂະໜາດ 630 ແອັມ(AMP)',
+            'ການກໍ່ສ້າງໃຕ້ດິນ 22KV + ໄຟເບີອັອບຕິກ ແລະ ສະວິດເກຍໄຟຟ້າ ຂະໜາດ 630 ແອັມ(AMP)':'ການກໍ່ສ້າງໃຕ້ດິນ 22KV + ໄຟເບີອັອບຕິກ ແລະ ສະວິດເກຍໄຟຟ້າ ຂະໜາດ 630 ແອັມ(AMP)',
+            'The project takes the 0,4/22kV electric grid and the fiber optic cable to the ground with a 630 Amp LT Electrical Switchgear, location: South 13th Street, Main16, SangHin Village, Saythany District, Vientian Province.':'ໂຄງການ ເອົາຕາຂ່າຍໄຟຟ້າ 0,4/22kV ແລະ ສາຍໄຟອັອບຕິກລົງດິນ ພ້ອມດ້ວຍຕູ້ LT Electrical Switchgear ຂະຫນາດ 630 Amp, ສະຖານທີ: ຖະໜົນ13ໃຕ້,ຫຼັກ16, ບ້ານສາງຫີນ, ເມືອງໄຊທານີ, ນະຄອນຫລວງວຽງຈັນ.',
+            'ໂຄງການ ເອົາຕາຂ່າຍໄຟຟ້າ 0,4/22kV ແລະ ສາຍໄຟອັອບຕິກລົງດິນ ພ້ອມດ້ວຍຕູ້ LT Electrical Switchgear ຂະຫນາດ 630 Amp, ສະຖານທີ: ຖະໜົນ13ໃຕ້,ຫຼັກ16, ບ້ານສາງຫີນ, ເມືອງໄຊທານີ, ນະຄອນຫລວງວຽງຈັນ.':'ໂຄງການ ເອົາຕາຂ່າຍໄຟຟ້າ 0,4/22kV ແລະ ສາຍໄຟອັອບຕິກລົງດິນ ພ້ອມດ້ວຍຕູ້ LT Electrical Switchgear ຂະຫນາດ 630 Amp, ສະຖານທີ: ຖະໜົນ13ໃຕ້,ຫຼັກ16, ບ້ານສາງຫີນ, ເມືອງໄຊທານີ, ນະຄອນຫລວງວຽງຈັນ.',
+            'ການສະຫນອງ ແລະ ຕິດຕັ້ງ TR 250KVA + 22KV ແລະ LOCA EV FAST CHARGER':'ການສະຫນອງ ແລະ ຕິດຕັ້ງ TR 250KVA + 22KV ແລະ LOCA EV FAST CHARGER',
+            'THE SUPPLY AND INSTALLATION OF TR 250KVA + 22KV AND LOCA EV FAST CHARGER':'ການສະຫນອງ ແລະ ຕິດຕັ້ງ TR 250KVA + 22KV ແລະ LOCA EV FAST CHARGER',
+            'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (160kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Loca Fast Charge 120kW, ສະຖານທີ່: ບ້ານສົມສະອາດ,​ ເມືອງທ່າແຂກ,​ ແຂວງຄຳມ່ວນ.':'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (160kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Loca Fast Charge 120kW, ສະຖານທີ່: ບ້ານສົມສະອາດ,​ ເມືອງທ່າແຂກ,​ ແຂວງຄຳມ່ວນ.',
+            'Construction of a 22kV medium-voltage electricity grid and installation of 01 sets of electrical circuits (160kVA/3Ph) with the Loca Fast Charge 120kW, location: Somsaeard Village, Thakhaek District, Khammuan Province.':'ໂຄງການ ກໍ່ສ້າງຕາຂ່າຍໄຟຟ້າແຮງກາງ 22kV ແລະ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ 01 ຊຸດ (160kVA/3Ph) ພ້ອມດ້ວຍຕູ້ Loca Fast Charge 120kW, ສະຖານທີ່: ບ້ານສົມສະອາດ,​ ເມືອງທ່າແຂກ,​ ແຂວງຄຳມ່ວນ.',
+       'THE SUPPLY AND INSTALLATION OF TR 800KVA + MDB + 22KV TRANSMISSION LINE':'ການສະໜອງ ແລະ ຕິດຕັ້ງສາຍສົ່ງTR 800KVA + MDB + 22KV',
+       'ການສະໜອງ ແລະ ຕິດຕັ້ງສາຍສົ່ງTR 800KVA + MDB + 22KV':'ການສະໜອງ ແລະ ຕິດຕັ້ງສາຍສົ່ງTR 800KVA + MDB + 22KV',
+       'The installation of 01 sets of electrical batteries and MDB boards (800kVA/3Ph) to serve the Ottovin (KOLAO) Branch 1, Location: T2 Road, KhounTa Village, SeeKhottaBong District, Vientian Province.':'ໂຄງການ​ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ​ ແລະ​ ຕູ້​ MDB ຈຳນວນ 01 ຊຸດ (800kVA/3Ph) ເພື່ອຮັບໃຊ້​ ບໍລິສັດ​ ໂອໂຕເວີນດ໌ (KOLAO)​ ສາຂາທີ ​1, ສະຖານທີ: ຖະໜົນ​ T2,​ ບ້ານຂຸນຕາ,​ເມືອງສີໂຄດຕະບອງ,​ ນະຄອນຫລວງວຽງຈັນ.​',
+       'ໂຄງການ​ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ​ ແລະ​ ຕູ້​ MDB ຈຳນວນ 01 ຊຸດ (800kVA/3Ph) ເພື່ອຮັບໃຊ້​ ບໍລິສັດ​ ໂອໂຕເວີນດ໌ (KOLAO)​ ສາຂາທີ ​1, ສະຖານທີ: ຖະໜົນ​ T2,​ ບ້ານຂຸນຕາ,​ເມືອງສີໂຄດຕະບອງ,​ ນະຄອນຫລວງວຽງຈັນ.​':'ໂຄງການ​ ຕິດຕັ້ງໝໍ້ແປງໄຟຟ້າ​ ແລະ​ ຕູ້​ MDB ຈຳນວນ 01 ຊຸດ (800kVA/3Ph) ເພື່ອຮັບໃຊ້​ ບໍລິສັດ​ ໂອໂຕເວີນດ໌ (KOLAO)​ ສາຂາທີ ​1, ສະຖານທີ: ຖະໜົນ​ T2,​ ບ້ານຂຸນຕາ,​ເມືອງສີໂຄດຕະບອງ,​ ນະຄອນຫລວງວຽງຈັນ.​',
+       'THE SUPPLY AND INSTALLATION OF TR 50KVA/3PHASE':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງTR 50KVA/3PHASE',
+       'ການສະຫນອງ ແລະ ການຕິດຕັ້ງTR 50KVA/3PHASE':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງTR 50KVA/3PHASE',
+       'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍໝໍ້ແປງ 50kVA ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ສາຂາໂພນປາເປົ້າ​ ສະຖານທີ: ບ້ານໂພນປາເປົ້່າ,​ ເມືອງສີສັດຕະນາກ,​ ນະຄອນຫລວງວຽງຈັນ.':'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍໝໍ້ແປງ 50kVA ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ສາຂາໂພນປາເປົ້າ​ ສະຖານທີ: ບ້ານໂພນປາເປົ້່າ,​ ເມືອງສີສັດຕະນາກ,​ ນະຄອນຫລວງວຽງຈັນ.',
+       'The 50kVA supply and replacement program to serve the Mini big C branch of the target fish ingestion location: Ponpapao Village, SySattanark District ,Vientian Province':'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍໝໍ້ແປງ 50kVA ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ສາຂາໂພນປາເປົ້າ​ ສະຖານທີ: ບ້ານໂພນປາເປົ້່າ,​ ເມືອງສີສັດຕະນາກ,​ ນະຄອນຫລວງວຽງຈັນ.',
+       'THE SUPPLY AND INSTALLATION OF BILLBOARD AT MINI BIG C':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ BILLBOARD ທີ່ MINI BIG C',
+       'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ BILLBOARD ທີ່ MINI BIG C':'ການສະຫນອງ ແລະ ການຕິດຕັ້ງ BILLBOARD ທີ່ MINI BIG C',
+'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍດອກໄຟປ້າຍ ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ຈຳນວນ 09 ສາຂາ​ ສະຖານທີ: ນະຄອນຫລວງວຽງຈັນ.':'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍດອກໄຟປ້າຍ ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ຈຳນວນ 09 ສາຂາ​ ສະຖານທີ: ນະຄອນຫລວງວຽງຈັນ.',
+'The project provides and replaces the signature lights to serve the Mini big C company of 09 location branches: Vientian Province':'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍດອກໄຟປ້າຍ ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ຈຳນວນ 09 ສາຂາ​ ສະຖານທີ: ນະຄອນຫລວງວຽງຈັນ.',
+'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍດອກໄຟປ້າຍ ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ຈຳນວນ 09 ສາຂາ​ ສະຖານທີ: ນະຄອນຫລວງວຽງຈັນ.':'ໂຄງການ​ ສະໜອງ ແລະ​ ປ່ຽນຖ່າຍດອກໄຟປ້າຍ ເພື່ອຮັບໃຊ້ ບໍລິສັດ Mini big C ຈຳນວນ 09 ສາຂາ​ ສະຖານທີ: ນະຄອນຫລວງວຽງຈັນ.',
+          }
+    };
+
+    // Function to update translations
+   function updateTranslations(lang) {
+        const elements = document.querySelectorAll('.translate');
+        elements.forEach(element => {
+            const translationKey = element.textContent;
+            element.textContent = translations[lang][translationKey];
+        });
+    }
+   
+    // Language button event listeners
+    const enButton = document.getElementById('enButton');
+    const laButton = document.getElementById('laButton');
+
+    enButton.addEventListener('click', () => {
+        updateTranslations('en');
+    });
+
+    laButton.addEventListener('click', () => {
+        updateTranslations('la');
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".accordion-button.translate");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const selectedLang = "en"; // Set the initial language (e.g., English)
+
+        const translation = button.getAttribute(`data-${selectedLang}`);
+        if (translation) {
+          button.textContent = translation;
+        }
+      });
+    });
+  });
+</script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

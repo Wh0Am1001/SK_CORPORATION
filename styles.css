@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Noto Sans Lao Looped', sans-serif;
+  }
+
+  .material-icons-outlined {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 40px;
+  }
+.material-icons-outlined-icon{
+    font-size: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr 1fr; /* Added a row for the footer */
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main'
+    'footer footer footer footer'; /* Define the footer area */
+  height: 150vh;
+}
+
+
+  /* ---------- HEADER ---------- */
+  .header {
+    grid-area: header;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  /* ---------- SIDEBAR ---------- */
+
+  #sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #ffffff;
+    overflow-y: auto;
+
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-title > span {
+    display: none;
+  }
+
+  .sidebar-brand {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  .sidebar-list {
+    padding: 0;
+    margin-top: 15px;
+    list-style-type: none;
+  }
+
+  .sidebar-list-item {
+    padding: 15px 15px 15px 15px;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Add smooth transitions for background color, text color, border, and font weight */
+    border-bottom: 2px solid transparent; /* Initial transparent border */
+    font-weight: normal; /* Initial font weight */
+  }
+
+  .sidebar-list-item:hover {
+    background-color: rgba(137, 137, 137, 0.2);
+    cursor: pointer;
+    background-color: #f8f9fa; /* Change background color on hover */
+  color: #000000; /* Change text color on hover */
+  border-bottom: 3px solid #000000; /* Add border on hover */
+  font-weight: bold; /* Increase font weight on hover */
+  }
+
+  .sidebar-list-item > a {
+    text-decoration: none;
+    color: #9e9ea4;
+  }
+
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    /*
+      the z-index of the ApexCharts is 11
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar 
+      on small screens
+    */
+    z-index: 12 !important;
+  }
+  /* Medium <= 992px */
+
+  @media screen and (max-width: 2000px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        'header'
+        'main';
+    }
+
+    #sidebar {
+      display: none;
+    }
+
+    .menu-icon {
+      display: inline;
+      cursor: pointer;
+    }
+
+    .sidebar-title > span {
+      display: inline;
+      cursor: pointer;
+    }
+  }
+
+ 
+  /* Extra Small <= 576px */
+
+  @media screen and (max-width: 576px) {
+    .hedaer-left {
+      display: none;
+    }
+  }
+  @media (min-width: 1200px) { /* Large screens */
+    .menu-icon {
+      display: none;
+    }
+   
+  }
+
+  @media (max-width: 1200px) { /* Screens smaller than 570px */
+    .header-right {
+      display: none;
+    }
+    
+  }
+
+ 
+
+/* Apply styles to the navbar when hovered */
+.navbar-nav .nav-item {
+  transition: background-color 0.5s, color 0.5s, border-bottom 2s, font-weight 0.3s;
+  /* Add smooth transitions for background color, text color, border, and font weight */
+  border-bottom: 2px solid transparent; /* Initial transparent border */
+  font-weight: normal; /* Initial font weight */
+  
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: #f8f9fa; /* Change background color on hover */
+  color: #c3ff00; /* Change text color on hover */
+  border-bottom: 2px solid #000000; /* Add border on hover */
+  font-weight: bold; /* Increase font weight on hover */
+}
+  
+/* Style the dropdown menu items */
+.dropdown-item:hover,
+.dropdown-item:focus {
+background-color: #30373e; /* Change this to your desired hover color */
+color: #ffffff; /* Change this to the desired text color on hover */
+}
+
+/* Style the active dropdown menu item */
+.dropdown-item.active,
+.dropdown-item:active {
+background-color: #2b3745; /* Change this to your desired active color */
+color: #fff; /* Change this to the desired text color on active state */
+}
+
+.moving {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.moving-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover; /* Change back to 'cover' for responsiveness */
+  background-repeat: no-repeat;
+  animation: changeImage 100s linear infinite;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .moving-bg {
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+@keyframes changeImage {
+  0% {
+      background-image: url('./images/bg.jpg');
+  }
+  25% {
+      background-image: url('./images/bg2.jpg');
+  }
+  50% {
+      background-image: url('./images/financing.jpg');
+  }
+  75% {
+      background-image: url('./images/n2.jpg');
+  }
+  100% {
+      background-image: url('./images/bg.jpg');
+  }
+}
+/* Adjusted styles */
+.header  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.content {
+  position: fixed;
+  /* Adjusted z-index */
+  z-index: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Noto Sans Lao Looped', sans-serif;
+  z-index: 2; /* Increased z-index */
+}
+
+
+/* Custom CSS for Card Images */
+.card-img-top {
+  object-fit: cover;
+  /* Ensure the image covers the entire container */
+  height: 225px;
+  width: 349px;
+}
+
+.custom-card {
+  height: 500px;
+  width: 350px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow size on hover */
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@300&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-ct{
+            background-image: url('./images/bgct.jpg'); /* Replace with your image path */
+    background-size: cover; 
+        }
+
+/* Apply these styles to adjust the carousel captions */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7); /* Change this to your desired background color */
+  padding: 10px; /* Adjust the padding as needed */
+  color: white; /* Change the text color for the captions */
+}
+
+.carousel-caption h3 {
+  font-size: 20px; /* Adjust the font size for the title */
+  font-weight: bold; /* Add font-weight if desired */
+}
+
+.carousel-caption p {
+  font-size: 15px; /* Adjust the font size for the description */
+  margin-bottom: 0; /* Remove default margin to avoid spacing issues */
+}
+/* Apply a flexbox layout to the grid container */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+}
+
+/* Let the content expand and take up the remaining space */
+.content-ct {
+    flex-grow: 1;
+    padding: 20px; /* Add padding to the content area if needed */
+}
+.centered-and-bold {
+  text-align: center; /* Center-align the text */
+  font-weight: bold; /* Make the text bold */
+  margin-top: 50px; /* Add margin from the top */
+  color:rgb(208, 255, 0);
+  background-color: rgb(43, 43, 43);
+}
+    </style>
+  </head>
+
+<body>
+  <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+         <a href="./index.html">
+           <img src="./images/logo.jpg" style="width: 150px; height: 70px;">
+         </a>
+        </div>
+         <div class="headerlanguage">
+           <button class="btn btn-outline-info" id="enButton">English</button>
+           <button class="btn btn-outline-danger" id="laButton">Lao</button>
+         </div>
+        <div class="header-right">
+          <!-- Navbar Form -->
+          <nav class="navbar navbar-expand-sm navbar-light bg-light">
+           <div class="container">
+               <ul class="navbar-nav">
+                   <!-- Your menu items here -->
+                   <li class="nav-item">
+                       <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+                   </li> 
+                       <li class="nav-item">
+                           <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+                          
+                       </li> <li class="nav-item">
+                        <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+                    </li> 
+                       <li class="nav-item">
+                           <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+                       </li> 
+                       <li class="nav-item">
+                           <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+                       </li>
+                       
+                 
+               </ul>
+           </div>
+       </nav>
+         </div>
+ 
+       <div class="menu-icon" onclick="openSidebar()">
+           <span class="material-icons-outlined">menu</span>
+         </div>
+       </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="./index.html">
+                <span class="material-icons-outlined" style="font-size: 22px;color:rgb(0, 0, 0);">SK CORPORATION</span>
+            </a>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+            </a>
+          </li>   
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!--Content-->
+        <div class="content-ct">
+          <h1 class="centered-and-bold translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</h1>
+          <h6 style="font-size: 20px; font-size: 15px;font-weight: bold;">CONTACT: Mr. Sengtavanh SAYASENHManaging Director & CEO (SK Corporation Co., Ltd)<br>
+            +856 20 79999995 - 79999996 Sengtavanh_SAYASENH@Outlook.com</h6>
+            <hr>
+            <div class="row">
+               <div class="col-lg-8 col-md-10 col-sm-12 m-auto"> <!-- Use col-lg-8 for large, col-md-10 for medium, and col-sm-12 for small screens -->
+                    <div class="carousel slide" id="slider1" data-bs-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <button  class="active" data-bs-target="#slider1" data-bs-slide-to="0"></button>
+                                <button  data-bs-target="#slider1" data-bs-slide-to="1"></button>
+                                <button  data-bs-target="#slider1" data-bs-slide-to="2"></button>
+                                <button  data-bs-target="#slider1" data-bs-slide-to="3"></button>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item">
+                                    <img src="./images/resources.jpg" class="d-block w-100">
+                                    <div class="carousel-caption d-block d-sm-block d-md-block">
+                                        <h3 class="translate" data-en="RESOURCES" data-la="ຊັບພະຍາກອນ">RESOURCES</h3>
+                                        <p class="translate" data-en="The company has all of its own plant and equipment." data-la="ບໍລິສັດມີໂຮງງານແລະອຸປະກອນຂອງຕົນເອງ.">The company has all of its own plant and equipment.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/employee.jpg" class="d-block w-100">
+                                    <div class="carousel-caption d-block d-sm-block d-md-block">
+                                        <h3 class="translate" data-en="EMPLOYEES" data-la="ພະນັກງານ">EMPLOYEES</h3>
+                                        <p class="translate" data-en="The company has a lot of people who can help with work, both in technical and administrative areas.They also have a workforce of people who are good at doing things like driving and working with tools.Finally, the company also has a workforce of people who are responsible for keeping the grounds clean." data-la="ບໍລິສັດມີຫຼາຍຄົນທີ່ສາມາດຊ່ວຍໃນການເຮັດວຽກໄດ້ ທັງໃນດ້ານວິຊາການ ແລະ ດ້ານການບໍລິຫານ. ພວກເຂົາຍັງມີແຮງງານຂອງຄົນທີ່ເກັ່ງໃນການເຮັດສິ່ງຕ່າງໆເຊັ່ນການຂັບຂີ່ແລະເຮັດວຽກກັບເຄື່ອງມື.ຫຼ້າສຸດ, ບໍລິສັດຍັງມີແຮງງານຂອງປະຊາຊົນຜູ້ຮັບຜິດຊອບໃນການຮັກສາພື້ນຖານໃຫ້ສະອາດ.">The company has a lot of people who can help with work, both in technical and administrative areas.They also have a workforce of people who are good at doing things like driving and working with tools.Finally, the company also has a workforce of people who are responsible for keeping the grounds clean.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item active">
+                                    <img src="./images/financing.jpg" class="d-block w-100">
+                                    <div class="carousel-caption d-block d-sm-block d-md-block">
+                                        <h3  class="translate" data-en="FINANCING" data-la="ການເງິນ">FINANCING</h3>
+                                        <p class="translate" data-en="The Company has the capability to sustain its operations and creditable supported by Public Bank Bernard Vientiane and Lao Development Bank." data-la="ບໍລິສັດມີຄວາມສາມາດໃນການສະຫນັບສະຫນູນການດໍາເນີນງານ ແລະ ສິນເຊື່ອທີ່ໄດ້ຮັບການສະຫນັບສະຫນູນຈາກທະນາຄານເອກະຊົນ Bernard Vientiane ແລະ Lao Development Bank.">The Company has the capability to sustain its operations and creditable supported by Public Bank Bernard Vientiane and Lao Development Bank.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/sale.jpg" class="d-block w-100">
+                                    <div class="carousel-caption d-block d-sm-block d-md-block">
+                                        <h3  class="translate" data-en="SALE OF CONSTRUCTION MATERIALS" data-la="ການຂາຍວັດສະດຸກໍ່ສ້າງ">SALE OF CONSTRUCTION MATERIALS</h3>
+                                        <p class="translate" data-en="Through our contacts in Lao and Thailand the company is able to offer competitive rates and short delivery times on most Construction materials requirements" data-la="ຜ່ານການຕິດຕໍ່ຂອງພວກເຮົາໃນລາວແລະໄທບໍລິສັດສາມາດສະເຫນີອັດຕາການແຂ່ງຂັນແລະເວລາຈັດສົ່ງສັ້ນຕາມຄວາມຕ້ອງການວັດສະດຸກໍ່ສ້າງສ່ວນໃຫຍ່">Through our contacts in Lao and Thailand the company is able to offer competitive rates and short delivery times on most Construction materials requirements</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide buttom -->
+                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#slider1">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#slider1">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+     
+
+        <!--footer-->
+        <div class="footer">
+          <p class="translate" data-en=" A part of SK Corporation, BK Construction has already been building in distant areas for 29 years." data-la=" ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ."> A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.</p>
+          <p class="translate" data-en="Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader" data-la="ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ">Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader</p>
+        </div>
+
+   </div>
+
+   <script>
+    // Translations object
+    const translations = {
+        'en': {
+          'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'NEWS',
+            'ຂ່າວສານ':'NEWS',
+            'ໄຟຟ້າ': 'Electric',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'Hydropower Dam Project',
+            'Hydropower Dam Project':'Hydropower Dam Project',
+            'ຜົນສຳເລັດ':'The achievements',
+            'The achievements':'The achievements',
+            'ກ່ຽວກັບ':'About',
+            'About':'About',
+            'ຕິດຕໍ່':'Contact',
+            'Contact':'Contact',
+
+            'ຊັບພະຍາກອນ':'RESOURCES',
+            'RESOURCES':'RESOURCES',
+            'ບໍລິສັດມີໂຮງງານແລະອຸປະກອນຂອງຕົນເອງ.':'The company has all of its own plant and equipment.',
+            'The company has all of its own plant and equipment.':'The company has all of its own plant and equipment.',
+            'ພະນັກງານ':'EMPLOYEES',
+            'EMPLOYEES':'EMPLOYEES',
+            'ບໍລິສັດມີຫຼາຍຄົນທີ່ສາມາດຊ່ວຍໃນການເຮັດວຽກໄດ້ ທັງໃນດ້ານວິຊາການ ແລະ ດ້ານການບໍລິຫານ. ພວກເຂົາຍັງມີແຮງງານຂອງຄົນທີ່ເກັ່ງໃນການເຮັດສິ່ງຕ່າງໆເຊັ່ນການຂັບຂີ່ແລະເຮັດວຽກກັບເຄື່ອງມື.ຫຼ້າສຸດ, ບໍລິສັດຍັງມີແຮງງານຂອງປະຊາຊົນຜູ້ຮັບຜິດຊອບໃນການຮັກສາພື້ນຖານໃຫ້ສະອາດ.':'The company has a lot of people who can help with work, both in technical and administrative areas.They also have a workforce of people who are good at doing things like driving and working with tools.Finally, the company also has a workforce of people who are responsible for keeping the grounds clean.',
+            'The company has a lot of people who can help with work, both in technical and administrative areas.They also have a workforce of people who are good at doing things like driving and working with tools.Finally, the company also has a workforce of people who are responsible for keeping the grounds clean.':'The company has a lot of people who can help with work, both in technical and administrative areas.They also have a workforce of people who are good at doing things like driving and working with tools.Finally, the company also has a workforce of people who are responsible for keeping the grounds clean.',
+            'FINANCING':'FINANCING',
+            'ການເງິນ':'FINANCING',
+            'The Company has the capability to sustain its operations and creditable supported by Public Bank Bernard Vientiane and Lao Development Bank.':'The Company has the capability to sustain its operations and creditable supported by Public Bank Bernard Vientiane and Lao Development Bank.',
+            'ບໍລິສັດມີຄວາມສາມາດໃນການສະຫນັບສະຫນູນການດໍາເນີນງານ ແລະ ສິນເຊື່ອທີ່ໄດ້ຮັບການສະຫນັບສະຫນູນຈາກທະນາຄານເອກະຊົນ Bernard Vientiane ແລະ Lao Development Bank.':'The Company has the capability to sustain its operations and creditable supported by Public Bank Bernard Vientiane and Lao Development Bank.',
+            'ການຂາຍວັດສະດຸກໍ່ສ້າງ': 'SALE OF CONSTRUCTION MATERIALS',
+            'SALE OF CONSTRUCTION MATERIALS':'SALE OF CONSTRUCTION MATERIALS',
+            'Through our contacts in Lao and Thailand the company is able to offer competitive rates and short delivery times on most Construction materials requirements':'Through our contacts in Lao and Thailand the company is able to offer competitive rates and short delivery times on most Construction materials requirements',
+            'ຜ່ານການຕິດຕໍ່ຂອງພວກເຮົາໃນລາວແລະໄທບໍລິສັດສາມາດສະເຫນີອັດຕາການແຂ່ງຂັນແລະເວລາຈັດສົ່ງສັ້ນຕາມຄວາມຕ້ອງການວັດສະດຸກໍ່ສ້າງສ່ວນໃຫຍ່':'Through our contacts in Lao and Thailand the company is able to offer competitive rates and short delivery times on most Construction materials requirements',
+
+            ' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.': ' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.',
+            ' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.':' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.',
+            'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader':'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader',
+            'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ':'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader'
+        },
+        'la': {
+          'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'ຂ່າວສານ',
+            'ຂ່າວສານ':'ຂ່າວສານ',
+            'Hydropower Dam Project':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'The achievements':'ຜົນສຳເລັດ',
+            'ຜົນສຳເລັດ':'ຜົນສຳເລັດ',
+            'About':'ກ່ຽວກັບ',
+            'ກ່ຽວກັບ':'ກ່ຽວກັບ',
+            'Contact':'ຕິດຕໍ່',
+            'ຕິດຕໍ່':'ຕິດຕໍ່',
+            
+            'RESOURCES':'ຊັບພະຍາກອນ',
+            'ຊັບພະຍາກອນ':'ຊັບພະຍາກອນ',
+            'The company has all of its own plant and equipment.':'ບໍລິສັດມີໂຮງງານແລະອຸປະກອນຂອງຕົນເອງ.',
+            'ບໍລິສັດມີໂຮງງານແລະອຸປະກອນຂອງຕົນເອງ.':'ບໍລິສັດມີໂຮງງານແລະອຸປະກອນຂອງຕົນເອງ.',
+            'EMPLOYEES':'ພະນັກງານ',
+            'ພະນັກງານ':'ພະນັກງານ',
+            'The company has a lot of people who can help with work, both in technical and administrative areas.They also have a workforce of people who are good at doing things like driving and working with tools.Finally, the company also has a workforce of people who are responsible for keeping the grounds clean.':'ບໍລິສັດມີຫຼາຍຄົນທີ່ສາມາດຊ່ວຍໃນການເຮັດວຽກໄດ້ ທັງໃນດ້ານວິຊາການ ແລະ ດ້ານການບໍລິຫານ. ພວກເຂົາຍັງມີແຮງງານຂອງຄົນທີ່ເກັ່ງໃນການເຮັດສິ່ງຕ່າງໆເຊັ່ນການຂັບຂີ່ແລະເຮັດວຽກກັບເຄື່ອງມື.ຫຼ້າສຸດ, ບໍລິສັດຍັງມີແຮງງານຂອງປະຊາຊົນຜູ້ຮັບຜິດຊອບໃນການຮັກສາພື້ນຖານໃຫ້ສະອາດ.',
+            'ບໍລິສັດມີຫຼາຍຄົນທີ່ສາມາດຊ່ວຍໃນການເຮັດວຽກໄດ້ ທັງໃນດ້ານວິຊາການ ແລະ ດ້ານການບໍລິຫານ. ພວກເຂົາຍັງມີແຮງງານຂອງຄົນທີ່ເກັ່ງໃນການເຮັດສິ່ງຕ່າງໆເຊັ່ນການຂັບຂີ່ແລະເຮັດວຽກກັບເຄື່ອງມື.ຫຼ້າສຸດ, ບໍລິສັດຍັງມີແຮງງານຂອງປະຊາຊົນຜູ້ຮັບຜິດຊອບໃນການຮັກສາພື້ນຖານໃຫ້ສະອາດ.':'ບໍລິສັດມີຫຼາຍຄົນທີ່ສາມາດຊ່ວຍໃນການເຮັດວຽກໄດ້ ທັງໃນດ້ານວິຊາການ ແລະ ດ້ານການບໍລິຫານ. ພວກເຂົາຍັງມີແຮງງານຂອງຄົນທີ່ເກັ່ງໃນການເຮັດສິ່ງຕ່າງໆເຊັ່ນການຂັບຂີ່ແລະເຮັດວຽກກັບເຄື່ອງມື.ຫຼ້າສຸດ, ບໍລິສັດຍັງມີແຮງງານຂອງປະຊາຊົນຜູ້ຮັບຜິດຊອບໃນການຮັກສາພື້ນຖານໃຫ້ສະອາດ.',
+            'FINANCING':'ການເງິນ',
+            'ການເງິນ':'ການເງິນ',
+            'The Company has the capability to sustain its operations and creditable supported by Public Bank Bernard Vientiane and Lao Development Bank.':'ບໍລິສັດມີຄວາມສາມາດໃນການສະຫນັບສະຫນູນການດໍາເນີນງານ ແລະ ສິນເຊື່ອທີ່ໄດ້ຮັບການສະຫນັບສະຫນູນຈາກທະນາຄານເອກະຊົນ Bernard Vientiane ແລະ Lao Development Bank.',
+            'ບໍລິສັດມີຄວາມສາມາດໃນການສະຫນັບສະຫນູນການດໍາເນີນງານ ແລະ ສິນເຊື່ອທີ່ໄດ້ຮັບການສະຫນັບສະຫນູນຈາກທະນາຄານເອກະຊົນ Bernard Vientiane ແລະ Lao Development Bank.':'ບໍລິສັດມີຄວາມສາມາດໃນການສະຫນັບສະຫນູນການດໍາເນີນງານ ແລະ ສິນເຊື່ອທີ່ໄດ້ຮັບການສະຫນັບສະຫນູນຈາກທະນາຄານເອກະຊົນ Bernard Vientiane ແລະ Lao Development Bank.',
+            'SALE OF CONSTRUCTION MATERIALS':'ການຂາຍວັດສະດຸກໍ່ສ້າງ',
+            'ການຂາຍວັດສະດຸກໍ່ສ້າງ':'ການຂາຍວັດສະດຸກໍ່ສ້າງ',
+            'Through our contacts in Lao and Thailand the company is able to offer competitive rates and short delivery times on most Construction materials requirements':'ຜ່ານການຕິດຕໍ່ຂອງພວກເຮົາໃນລາວແລະໄທບໍລິສັດສາມາດສະເຫນີອັດຕາການແຂ່ງຂັນແລະເວລາຈັດສົ່ງສັ້ນຕາມຄວາມຕ້ອງການວັດສະດຸກໍ່ສ້າງສ່ວນໃຫຍ່',
+            'ຜ່ານການຕິດຕໍ່ຂອງພວກເຮົາໃນລາວແລະໄທບໍລິສັດສາມາດສະເຫນີອັດຕາການແຂ່ງຂັນແລະເວລາຈັດສົ່ງສັ້ນຕາມຄວາມຕ້ອງການວັດສະດຸກໍ່ສ້າງສ່ວນໃຫຍ່':'ຜ່ານການຕິດຕໍ່ຂອງພວກເຮົາໃນລາວແລະໄທບໍລິສັດສາມາດສະເຫນີອັດຕາການແຂ່ງຂັນແລະເວລາຈັດສົ່ງສັ້ນຕາມຄວາມຕ້ອງການວັດສະດຸກໍ່ສ້າງສ່ວນໃຫຍ່',
+
+            ' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.':' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.',
+            ' A part of SK Corporation, BK Construction has already been building in distant areas for 29 years.':' ສ່ວນຫນຶ່ງຂອງບໍລິສັດ SK,BK ການກໍ່ສ້າງໄດ້ກໍ່ສ້າງຢູ່ເຂດຫ່າງໄກສອກຫຼີກມາແລ້ວ 29 ປີແລ້ວ.',
+            'Besides completing projects in some of Laos most remote and delicate environments. BK has pushed the company to the leadership role of industry leader':'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ',
+            'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ':'ນອກເຫນືອໄປຈາກການສໍາເລັດໂຄງການໃນບາງສະພາບແວດລ້ອມທີ່ຫ່າງໄກສອກຫຼີກ ແລະ ລະອຽດທີ່ສຸດຂອງລາວ.BKໄດ້ຊຸກຍູ້ໃຫ້ບໍລິສັດມີບົດບາດເປັນຜູ້ນໍາຂອງຜູ້ນໍາອຸດສາຫະກໍາ'
+        
+        }
+    };
+
+    // Function to update translations
+   function updateTranslations(lang) {
+        const elements = document.querySelectorAll('.translate');
+        elements.forEach(element => {
+            const translationKey = element.textContent;
+            element.textContent = translations[lang][translationKey];
+        });
+    }
+   
+    // Language button event listeners
+    const enButton = document.getElementById('enButton');
+    const laButton = document.getElementById('laButton');
+
+    enButton.addEventListener('click', () => {
+        updateTranslations('en');
+    });
+
+    laButton.addEventListener('click', () => {
+        updateTranslations('la');
+    });
+</script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

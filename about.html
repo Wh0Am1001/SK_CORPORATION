@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@300&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .content-ab{
+        position: fixed;
+  /* Adjusted z-index */
+  z-index: 0;
+  width: 100%;
+  text-align: center;
+      }
+
+      .centered-and-bold {
+  text-align: center; /* Center-align the text */
+  font-weight: bold; /* Make the text bold */
+  margin-top: 50px; /* Add margin from the top */
+  color:rgb(208, 255, 0);
+  background-color: rgb(43, 43, 43);
+  height: 55px;
+}
+
+/* Apply styles to the carousel text */
+.carousel-item p {
+    font-size: 18px; /* Adjust the font size */
+    color: yellow; /* Change the text color */
+    background-color: black; /* Change the background color */
+    height: auto;
+}
+
+/* Apply styles to the carousel control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* Customize the color of the carousel control icons */
+    color: aqua;
+}
+
+    </style>
+  </head>
+
+<body>
+  <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+         <a href="./index.html">
+           <img src="./images/logo.jpg" style="width: 150px; height: 70px;">
+         </a>
+        </div>
+         <div class="headerlanguage">
+           <button class="btn btn-outline-info" id="enButton">English</button>
+           <button class="btn btn-outline-danger" id="laButton">Lao</button>
+         </div>
+        <div class="header-right">
+          <!-- Navbar Form -->
+          <nav class="navbar navbar-expand-sm navbar-light bg-light">
+           <div class="container">
+               <ul class="navbar-nav">
+                   <!-- Your menu items here -->
+                   <li class="nav-item">
+                       <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+                   </li> 
+                       <li class="nav-item">
+                           <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+                          
+                       </li> <li class="nav-item">
+                        <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+                    </li> 
+                       <li class="nav-item">
+                           <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+                       </li> 
+                       <li class="nav-item">
+                           <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+                       </li>
+                       
+                 
+               </ul>
+           </div>
+       </nav>
+         </div>
+ 
+       <div class="menu-icon" onclick="openSidebar()">
+           <span class="material-icons-outlined">menu</span>
+         </div>
+       </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="./index.html">
+                <span class="material-icons-outlined" style="font-size: 22px;color:rgb(0, 0, 0);">SK CORPORATION</span>
+            </a>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="News.html" class="nav-link translate" data-en="NEWS" data-la="ຂ່າວສານ">NEWS</a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="Hydropower.html" class="nav-link translate" data-en="Hydropower Dam Project" data-la="ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ">Hydropower Dam Project</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="The achievements.html" class="nav-link translate" data-en="The achievements" data-la="ຜົນສຳເລັດ">The achievements</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="about.html" class="nav-link translate" data-en="About" data-la="ກ່ຽວກັບ">About</a>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <a href="contact.html" class="nav-link translate" data-en="Contact" data-la="ຕິດຕໍ່">Contact</a>
+            </a>
+          </li>   
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!--Content-->
+        <div class="content-ab">
+          <br>
+          <div class="moving"> <h1 class="centered-and-bold translate" data-en="About" data-la="ກ່ຽວກັບ">About</h1>
+            <div class="moving-bg"></div>
+            <div class="border">    
+              <img src="./images/n2.jpg" alt="Image">
+              
+             </div>
+            </div>
+            
+        </div>
+       
+        <div class="footer">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <p class="translate" data-en="The consulate is located:Phonthan Road, Phonthan Village,Vientian Province. Email: Sengtavanh_Sayasenh@Outlook.com , Tel:+856 20 79999995​ -​ 79999996." data-la="ສຳນັກງານຕັ້ງຢູ່: ຖະໜົນໂພນທັນ,​ ບ້ານໂພນທັນເໜືອ,​ ເມືອງໄຊເສດຖາ,​ ນະຄອນຫລວງວຽງຈັນ. Email: Sengtavanh_Sayasenh@Outlook.com, Tel:+856 20 79999995​ -​ 79999996.">The consulate is located:Phonthan Road, Phonthan Village,Vientian Province. Email: Sengtavanh_Sayasenh@Outlook.com , Tel:+856 20 79999995​ -​ 79999996.</p>
+              </div>
+              <div class="carousel-item">
+                <p class="translate" data-en="Services design, installation, repair and maintenance of power pipelines, power stations and high-voltage power transmission lines (115kV, 230kV) and renewable energy (sunlight, wind and biomass)." data-la="ບໍລິການ​ ອອກແບບ,​ ຕິດຕັ້ງ,​ ສ້ອມແປງ​ ແລະ​ ບຳລຸງຮັກສາເຂື່ອນໄຟຟ້າ,​ ສະຖານີໄຟຟ້າ ແລະ​ ສາຍສົ່ງໄຟຟ້າແຮງສູງ (115kV,​ 230kV) ແລະ​ ພະລັງງານທົດແທນ (ແສງຕາວັນ,​ ລົມ​ ແລະ​ ຊີວະມວນ).">Services design, installation, repair and maintenance of power pipelines, power stations and high-voltage power transmission lines (115kV, 230kV) and renewable energy (sunlight, wind and biomass).</p>
+              </div>
+              <div class="carousel-item">
+                <p class="translate" data-en="SK Corporation (BK Construction) is a Lao owned heavy equipment contractor established in Lao since 1988" data-la="ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງອຸປະກອນຫນັກLao ທີ່ໄດ້ສ້າງຕັ້ງຂຶ້ນໃນລາວຕັ້ງແຕ່ປີ 1988">SK Corporation (BK Construction) is a Lao owned heavy equipment contractor established in Lao since 1988</p>
+              </div>
+              <div class="carousel-item">
+                <p class="translate" data-en="SK Corporation (BK Construction) is a pre-qualified Lao government approved sub contractor and specializes in large Hydropower Dam construction." data-la="ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງທີ່ມີຄຸນວຸດທິກ່ອນທີ່ລັດຖະບານລາວໄດ້ຮັບຮອງເອົາຜູ້ຮັບເຫມົາກໍ່ສ້າງຍ່ອຍແລະຊ່ຽວຊານໃນຂະຫນາດໃຫຍ່ການກໍ່ສ້າງເຂື່ອນໄຟຟ້ານ້ໍາຕົກ.">SK Corporation (BK Construction) is a pre-qualified Lao government approved sub contractor and specializes in large Hydropower Dam construction.</p>
+              </div>
+              <div class="carousel-item">
+                <p class="translate" data-en="SK Corporation (BK Construction) has 26 years of experience working on numerous roads, bridges, irrigation and many other civil engineering projects." data-la="SK Corporation (BK Construction) ມີປະສົບການ 26 ປີ ໃນການເຮັດວຽກຕາມຖະຫນົນຫົນທາງ, ຂົວ, ຊົນລະປະທານ ແລະ ໂຄງການກໍ່ສ້າງເຂື່ອນອື່ນໆອີກຫຼາຍໂຄງການ.">SK Corporation (BK Construction) has 26 years of experience working on numerous roads, bridges, irrigation and many other civil engineering projects.</p>
+              </div>
+              <div class="carousel-item">
+                <p class="translate" data-en="SK Corporation (BK Construction) offers a wide range of heavy equipment for lease and is a leading supplier of construction materials." data-la="SK Corporation (BK Construction) ສະເຫນີອຸປະກອນທີ່ຫນັກຫຼາຍຮູບແບບສໍາລັບການເຊົ່າແລະເປັນຜູ້ສະຫນອງທີ່ນໍາຫນ້າຂອງວັດສະດຸກໍ່ສ້າງ.">SK Corporation (BK Construction) offers a wide range of heavy equipment for lease and is a leading supplier of construction materials.</p>
+              </div>
+              <div class="carousel-item">
+                <p class="translate" data-en="SK Corporation (BK Construction) is staffed with highly motivated and experienced personnel ready to handle any heavy equipment construction project from planning to completion." data-la="SK Corporation (BK Construction) ເປັນພະນັກງານທີ່ມີບຸກຄະລາກອນທີ່ມີແຮງຈູງໃຈສູງ ແລະ ມີປະສົບການພ້ອມຮັບມືກັບໂຄງການກໍ່ສ້າງອຸປະກອນຫນັກໃດໆ ຈາກການວາງແຜນຈົນສໍາເລັດ.">SK Corporation (BK Construction) is staffed with highly motivated and experienced personnel ready to handle any heavy equipment construction project from planning to completion.</p>
+              </div>
+              <div class="carousel-item">
+                <p class="translate" data-en="SK Corporation (BK Construction) provides 24 hour emergency service on any type of projected in any weather." data-la="SK Corporation (BK Construction) ເປັນພະນັກງານທີ່ມີບຸກຄະລາກອນທີ່ມີແຮງຈູງໃຈສູງ ແລະ ມີປະສົບການພ້ອມຮັບມືກັບໂຄງການກໍ່ສ້າງອຸປະກອນຫນັກໃດໆ ຈາກການວາງແຜນຈົນສໍາເລັດ.">SK Corporation (BK Construction) provides 24 hour emergency service on any type of projected in any weather.</p>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+ </div>
+
+
+   <script>
+    // Translations object
+    const translations = {
+        'en': {
+          'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'NEWS',
+            'ຂ່າວສານ':'NEWS',
+            'ໄຟຟ້າ': 'Electric',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'Hydropower Dam Project',
+            'Hydropower Dam Project':'Hydropower Dam Project',
+            'ຜົນສຳເລັດ':'The achievements',
+            'The achievements':'The achievements',
+            'ກ່ຽວກັບ':'About',
+            'About':'About',
+            'ຕິດຕໍ່':'Contact',
+            'Contact':'Contact',
+
+            'ສຳນັກງານຕັ້ງຢູ່: ຖະໜົນໂພນທັນ,​ ບ້ານໂພນທັນເໜືອ,​ ເມືອງໄຊເສດຖາ,​ ນະຄອນຫລວງວຽງຈັນ. Email: Sengtavanh_Sayasenh@Outlook.com, Tel:+856 20 79999995​ -​ 79999996.':'The consulate is located:Phonthan Road, Phonthan Village,Vientian Province. Email: Sengtavanh_Sayasenh@Outlook.com , Tel:+856 20 79999995​ -​ 79999996.',
+            'The consulate is located:Phonthan Road, Phonthan Village,Vientian Province. Email: Sengtavanh_Sayasenh@Outlook.com , Tel:+856 20 79999995​ -​ 79999996.': 'The consulate is located:Phonthan Road, Phonthan Village,Vientian Province. Email: Sengtavanh_Sayasenh@Outlook.com , Tel:+856 20 79999995​ -​ 79999996.',
+            'Services design, installation, repair and maintenance of power pipelines, power stations and high-voltage power transmission lines (115kV, 230kV) and renewable energy (sunlight, wind and biomass).':'Services design, installation, repair and maintenance of power pipelines, power stations and high-voltage power transmission lines (115kV, 230kV) and renewable energy (sunlight, wind and biomass).',
+            'ບໍລິການ​ ອອກແບບ,​ ຕິດຕັ້ງ,​ ສ້ອມແປງ​ ແລະ​ ບຳລຸງຮັກສາເຂື່ອນໄຟຟ້າ,​ ສະຖານີໄຟຟ້າ ແລະ​ ສາຍສົ່ງໄຟຟ້າແຮງສູງ (115kV,​ 230kV) ແລະ​ ພະລັງງານທົດແທນ (ແສງຕາວັນ,​ ລົມ​ ແລະ​ ຊີວະມວນ).':'Services design, installation, repair and maintenance of power pipelines, power stations and high-voltage power transmission lines (115kV, 230kV) and renewable energy (sunlight, wind and biomass).',
+            'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງອຸປະກອນຫນັກLao ທີ່ໄດ້ສ້າງຕັ້ງຂຶ້ນໃນລາວຕັ້ງແຕ່ປີ 1988':'SK Corporation (BK Construction) is a Lao owned heavy equipment contractor established in Lao since 1988',
+            'SK Corporation (BK Construction) is a Lao owned heavy equipment contractor established in Lao since 1988':'SK Corporation (BK Construction) is a Lao owned heavy equipment contractor established in Lao since 1988',
+            'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງທີ່ມີຄຸນວຸດທິກ່ອນທີ່ລັດຖະບານລາວໄດ້ຮັບຮອງເອົາຜູ້ຮັບເຫມົາກໍ່ສ້າງຍ່ອຍແລະຊ່ຽວຊານໃນຂະຫນາດໃຫຍ່ການກໍ່ສ້າງເຂື່ອນໄຟຟ້ານ້ໍາຕົກ.':'SK Corporation (BK Construction) is a pre-qualified Lao government approved sub contractor and specializes in large Hydropower Dam construction.',
+            'SK Corporation (BK Construction) is a pre-qualified Lao government approved sub contractor and specializes in large Hydropower Dam construction.': 'SK Corporation (BK Construction) is a pre-qualified Lao government approved sub contractor and specializes in large Hydropower Dam construction.',
+            'SK Corporation (BK Construction) has 26 years of experience working on numerous roads, bridges, irrigation and many other civil engineering projects.':'SK Corporation (BK Construction) has 26 years of experience working on numerous roads, bridges, irrigation and many other civil engineering projects.',
+            'SK Corporation (BK Construction) ມີປະສົບການ 26 ປີ ໃນການເຮັດວຽກຕາມຖະຫນົນຫົນທາງ, ຂົວ, ຊົນລະປະທານ ແລະ ໂຄງການກໍ່ສ້າງເຂື່ອນອື່ນໆອີກຫຼາຍໂຄງການ.':'SK Corporation (BK Construction) has 26 years of experience working on numerous roads, bridges, irrigation and many other civil engineering projects.',
+            'SK Corporation (BK Construction) ສະເຫນີອຸປະກອນທີ່ຫນັກຫຼາຍຮູບແບບສໍາລັບການເຊົ່າແລະເປັນຜູ້ສະຫນອງທີ່ນໍາຫນ້າຂອງວັດສະດຸກໍ່ສ້າງ.':'SK Corporation (BK Construction) offers a wide range of heavy equipment for lease and is a leading supplier of construction materials.',
+            'SK Corporation (BK Construction) offers a wide range of heavy equipment for lease and is a leading supplier of construction materials.':'SK Corporation (BK Construction) offers a wide range of heavy equipment for lease and is a leading supplier of construction materials.',
+            'SK Corporation (BK Construction) ເປັນພະນັກງານທີ່ມີບຸກຄະລາກອນທີ່ມີແຮງຈູງໃຈສູງ ແລະ ມີປະສົບການພ້ອມຮັບມືກັບໂຄງການກໍ່ສ້າງອຸປະກອນຫນັກໃດໆ ຈາກການວາງແຜນຈົນສໍາເລັດ.':'SK Corporation (BK Construction) is staffed with highly motivated and experienced personnel ready to handle any heavy equipment construction project from planning to completion.',
+            'SK Corporation (BK Construction) is staffed with highly motivated and experienced personnel ready to handle any heavy equipment construction project from planning to completion.':'SK Corporation (BK Construction) is staffed with highly motivated and experienced personnel ready to handle any heavy equipment construction project from planning to completion.',
+          'SK Corporation (BK Construction) provides 24 hour emergency service on any type of projected in any weather.':'SK Corporation (BK Construction) provides 24 hour emergency service on any type of projected in any weather.',
+          'SK Corporation (BK Construction) ໃຫ້ບໍລິການສຸກເສີນ 24 ຊົ່ວໂມງກ່ຽວກັບປະເພດໃດກໍ່ຕາມທີ່ຄາດຄະເນໄວ້ໃນສະພາບອາກາດໃດກໍ່ຕາມ.':'SK Corporation (BK Construction) provides 24 hour emergency service on any type of projected in any weather.',
+
+        },
+        'la': {
+            'SK CORPORATION': 'SK CORPORATION',
+            'NEWS':'ຂ່າວສານ',
+            'ຂ່າວສານ':'ຂ່າວສານ',
+            'Hydropower Dam Project':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ':'ໂຄງການເຂື່ອນໄຟຟ້ານ້ຳຕົກ',
+            'The achievements':'ຜົນສຳເລັດ',
+            'ຜົນສຳເລັດ':'ຜົນສຳເລັດ',
+            'About':'ກ່ຽວກັບ',
+            'ກ່ຽວກັບ':'ກ່ຽວກັບ',
+            'Contact':'ຕິດຕໍ່',
+            'ຕິດຕໍ່':'ຕິດຕໍ່',
+
+            'The consulate is located:Phonthan Road, Phonthan Village,Vientian Province. Email: Sengtavanh_Sayasenh@Outlook.com , Tel:+856 20 79999995​ -​ 79999996.':'ສຳນັກງານຕັ້ງຢູ່: ຖະໜົນໂພນທັນ,​ ບ້ານໂພນທັນເໜືອ,​ ເມືອງໄຊເສດຖາ,​ ນະຄອນຫລວງວຽງຈັນ. Email: Sengtavanh_Sayasenh@Outlook.com, Tel:+856 20 79999995​ -​ 79999996.',
+            'ສຳນັກງານຕັ້ງຢູ່: ຖະໜົນໂພນທັນ,​ ບ້ານໂພນທັນເໜືອ,​ ເມືອງໄຊເສດຖາ,​ ນະຄອນຫລວງວຽງຈັນ. Email: Sengtavanh_Sayasenh@Outlook.com, Tel:+856 20 79999995​ -​ 79999996.':'ສຳນັກງານຕັ້ງຢູ່: ຖະໜົນໂພນທັນ,​ ບ້ານໂພນທັນເໜືອ,​ ເມືອງໄຊເສດຖາ,​ ນະຄອນຫລວງວຽງຈັນ. Email: Sengtavanh_Sayasenh@Outlook.com, Tel:+856 20 79999995​ -​ 79999996.',
+            'Services design, installation, repair and maintenance of power pipelines, power stations and high-voltage power transmission lines (115kV, 230kV) and renewable energy (sunlight, wind and biomass).':'ບໍລິການ​ ອອກແບບ,​ ຕິດຕັ້ງ,​ ສ້ອມແປງ​ ແລະ​ ບຳລຸງຮັກສາເຂື່ອນໄຟຟ້າ,​ ສະຖານີໄຟຟ້າ ແລະ​ ສາຍສົ່ງໄຟຟ້າແຮງສູງ (115kV,​ 230kV) ແລະ​ ພະລັງງານທົດແທນ (ແສງຕາວັນ,​ ລົມ​ ແລະ​ ຊີວະມວນ).',
+            'ບໍລິການ​ ອອກແບບ,​ ຕິດຕັ້ງ,​ ສ້ອມແປງ​ ແລະ​ ບຳລຸງຮັກສາເຂື່ອນໄຟຟ້າ,​ ສະຖານີໄຟຟ້າ ແລະ​ ສາຍສົ່ງໄຟຟ້າແຮງສູງ (115kV,​ 230kV) ແລະ​ ພະລັງງານທົດແທນ (ແສງຕາວັນ,​ ລົມ​ ແລະ​ ຊີວະມວນ).':'ບໍລິການ​ ອອກແບບ,​ ຕິດຕັ້ງ,​ ສ້ອມແປງ​ ແລະ​ ບຳລຸງຮັກສາເຂື່ອນໄຟຟ້າ,​ ສະຖານີໄຟຟ້າ ແລະ​ ສາຍສົ່ງໄຟຟ້າແຮງສູງ (115kV,​ 230kV) ແລະ​ ພະລັງງານທົດແທນ (ແສງຕາວັນ,​ ລົມ​ ແລະ​ ຊີວະມວນ).',
+            'SK Corporation (BK Construction) is a Lao owned heavy equipment contractor established in Lao since 1988':'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງອຸປະກອນຫນັກLao ທີ່ໄດ້ສ້າງຕັ້ງຂຶ້ນໃນລາວຕັ້ງແຕ່ປີ 1988',
+            'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງອຸປະກອນຫນັກLao ທີ່ໄດ້ສ້າງຕັ້ງຂຶ້ນໃນລາວຕັ້ງແຕ່ປີ 1988':'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງອຸປະກອນຫນັກLao ທີ່ໄດ້ສ້າງຕັ້ງຂຶ້ນໃນລາວຕັ້ງແຕ່ປີ 1988',
+            'SK Corporation (BK Construction) is a pre-qualified Lao government approved sub contractor and specializes in large Hydropower Dam construction.':'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງທີ່ມີຄຸນວຸດທິກ່ອນທີ່ລັດຖະບານລາວໄດ້ຮັບຮອງເອົາຜູ້ຮັບເຫມົາກໍ່ສ້າງຍ່ອຍແລະຊ່ຽວຊານໃນຂະຫນາດໃຫຍ່ການກໍ່ສ້າງເຂື່ອນໄຟຟ້ານ້ໍາຕົກ.',
+            'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງທີ່ມີຄຸນວຸດທິກ່ອນທີ່ລັດຖະບານລາວໄດ້ຮັບຮອງເອົາຜູ້ຮັບເຫມົາກໍ່ສ້າງຍ່ອຍແລະຊ່ຽວຊານໃນຂະຫນາດໃຫຍ່ການກໍ່ສ້າງເຂື່ອນໄຟຟ້ານ້ໍາຕົກ.':'ບໍລິສັດ SK Corporation (BK Construction) ເປັນຜູ້ຮັບເຫມົາກໍ່ສ້າງທີ່ມີຄຸນວຸດທິກ່ອນທີ່ລັດຖະບານລາວໄດ້ຮັບຮອງເອົາຜູ້ຮັບເຫມົາກໍ່ສ້າງຍ່ອຍແລະຊ່ຽວຊານໃນຂະຫນາດໃຫຍ່ການກໍ່ສ້າງເຂື່ອນໄຟຟ້ານ້ໍາຕົກ.',
+            'SK Corporation (BK Construction) has 26 years of experience working on numerous roads, bridges, irrigation and many other civil engineering projects.':'SK Corporation (BK Construction) ມີປະສົບການ 26 ປີ ໃນການເຮັດວຽກຕາມຖະຫນົນຫົນທາງ, ຂົວ, ຊົນລະປະທານ ແລະ ໂຄງການກໍ່ສ້າງເຂື່ອນອື່ນໆອີກຫຼາຍໂຄງການ.',
+            'SK Corporation (BK Construction) ມີປະສົບການ 26 ປີ ໃນການເຮັດວຽກຕາມຖະຫນົນຫົນທາງ, ຂົວ, ຊົນລະປະທານ ແລະ ໂຄງການກໍ່ສ້າງເຂື່ອນອື່ນໆອີກຫຼາຍໂຄງການ.':'SK Corporation (BK Construction) ມີປະສົບການ 26 ປີ ໃນການເຮັດວຽກຕາມຖະຫນົນຫົນທາງ, ຂົວ, ຊົນລະປະທານ ແລະ ໂຄງການກໍ່ສ້າງເຂື່ອນອື່ນໆອີກຫຼາຍໂຄງການ.',
+            'SK Corporation (BK Construction) ສະເຫນີອຸປະກອນທີ່ຫນັກຫຼາຍຮູບແບບສໍາລັບການເຊົ່າແລະເປັນຜູ້ສະຫນອງທີ່ນໍາຫນ້າຂອງວັດສະດຸກໍ່ສ້າງ.':'SK Corporation (BK Construction) ສະເຫນີອຸປະກອນທີ່ຫນັກຫຼາຍຮູບແບບສໍາລັບການເຊົ່າແລະເປັນຜູ້ສະຫນອງທີ່ນໍາຫນ້າຂອງວັດສະດຸກໍ່ສ້າງ.',
+            'SK Corporation (BK Construction) offers a wide range of heavy equipment for lease and is a leading supplier of construction materials.':'SK Corporation (BK Construction) ສະເຫນີອຸປະກອນທີ່ຫນັກຫຼາຍຮູບແບບສໍາລັບການເຊົ່າແລະເປັນຜູ້ສະຫນອງທີ່ນໍາຫນ້າຂອງວັດສະດຸກໍ່ສ້າງ.',
+            'SK Corporation (BK Construction) ເປັນພະນັກງານທີ່ມີບຸກຄະລາກອນທີ່ມີແຮງຈູງໃຈສູງ ແລະ ມີປະສົບການພ້ອມຮັບມືກັບໂຄງການກໍ່ສ້າງອຸປະກອນຫນັກໃດໆ ຈາກການວາງແຜນຈົນສໍາເລັດ.':'SK Corporation (BK Construction) ເປັນພະນັກງານທີ່ມີບຸກຄະລາກອນທີ່ມີແຮງຈູງໃຈສູງ ແລະ ມີປະສົບການພ້ອມຮັບມືກັບໂຄງການກໍ່ສ້າງອຸປະກອນຫນັກໃດໆ ຈາກການວາງແຜນຈົນສໍາເລັດ.',
+            'SK Corporation (BK Construction) is staffed with highly motivated and experienced personnel ready to handle any heavy equipment construction project from planning to completion.':'SK Corporation (BK Construction) ເປັນພະນັກງານທີ່ມີບຸກຄະລາກອນທີ່ມີແຮງຈູງໃຈສູງ ແລະ ມີປະສົບການພ້ອມຮັບມືກັບໂຄງການກໍ່ສ້າງອຸປະກອນຫນັກໃດໆ ຈາກການວາງແຜນຈົນສໍາເລັດ.',
+            'SK Corporation (BK Construction) provides 24 hour emergency service on any type of projected in any weather.':'SK Corporation (BK Construction) ໃຫ້ບໍລິການສຸກເສີນ 24 ຊົ່ວໂມງກ່ຽວກັບປະເພດໃດກໍ່ຕາມທີ່ຄາດຄະເນໄວ້ໃນສະພາບອາກາດໃດກໍ່ຕາມ.',
+            'SK Corporation (BK Construction) ໃຫ້ບໍລິການສຸກເສີນ 24 ຊົ່ວໂມງກ່ຽວກັບປະເພດໃດກໍ່ຕາມທີ່ຄາດຄະເນໄວ້ໃນສະພາບອາກາດໃດກໍ່ຕາມ.':'SK Corporation (BK Construction) ໃຫ້ບໍລິການສຸກເສີນ 24 ຊົ່ວໂມງກ່ຽວກັບປະເພດໃດກໍ່ຕາມທີ່ຄາດຄະເນໄວ້ໃນສະພາບອາກາດໃດກໍ່ຕາມ.'
+        }
+    };
+    // Function to update translations
+    function updateTranslations(lang) {
+        const elements = document.querySelectorAll('.translate');
+        elements.forEach(element => {
+            const translationKey = element.textContent;
+            element.textContent = translations[lang][translationKey];
+        });
+    }
+   
+    // Language button event listeners
+    const enButton = document.getElementById('enButton');
+    const laButton = document.getElementById('laButton');
+
+    enButton.addEventListener('click', () => {
+        updateTranslations('en');
+    });
+
+    laButton.addEventListener('click', () => {
+        updateTranslations('la');
+    });
+
+   
+</script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
